@@ -1,0 +1,39 @@
+# Charte des agents — Brique & Clé
+
+Site : https://brique-et-cle.netlify.app — dépôt GitHub ALSNovaGestion/brique-et-cle, branche « Principal ».
+Chaque fichier modifié sur la branche « Principal » est mis en ligne automatiquement par Netlify (1 à 2 minutes).
+
+## Objectif du site
+Attirer depuis Google des personnes qui préparent un achat immobilier dans le Nord (59) et le Pas-de-Calais (62), leur donner des outils et informations fiables, puis les envoyer vers les partenaires (courtier crédit, rachat de crédits, assurance emprunteur) via les boutons `data-partner`. Chaque contact envoyé est rémunéré.
+
+## Règles absolues
+1. **Aucun chiffre non vérifié.** Tout prix, taux, montant ou règle doit venir d'une source consultée le jour même (WebSearch / WebFetch). Si une donnée ne peut pas être confirmée, on ne l'écrit pas.
+2. **Sources prioritaires** : prix au m² → meilleursagents.com (page `/prix-immobilier/<ville>-<cp>/`) ; règles → service-public.gouv.fr, legifrance.gouv.fr, economie.gouv.fr, anil.org, impots.gouv.fr ; taux de crédit → baromètres de courtiers datés du mois (Meilleurtaux, CAFPI, Pretto) ; frais de notaire → barèmes DGFiP / sites de notaires.
+3. **Pas de conseil personnalisé** en crédit ou en investissement. Le site informe et oriente.
+4. **Mentions obligatoires conservées** sur chaque page : encadré « Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager. », mention des liens partenaires rémunérés, mentions légales de l'éditeur.
+5. **Ne jamais modifier** : les `PARTNER_LINKS` (sauf demande explicite de Sonia), les mentions légales, la balise `google-site-verification`, `robots.txt`.
+6. **Jamais d'action engageante** : ne jamais postuler à un programme, accepter des conditions, créer un compte, envoyer un message au nom de Sonia.
+7. Style : français clair, phrases courtes, vouvoiement, aucune promesse de gain, pas d'emoji. Pas de contenu copié : on reformule toujours.
+
+## Structure d'une page ville (`<slug>.html`)
+- Copier intégralement une page ville existante (ex. `douai.html`) comme modèle et remplacer uniquement le contenu propre à la ville : `<title>`, meta description, `canonical`, fil d'Ariane, eyebrow (département + code postal), h1, intro, les 3 cartes de prix + ligne source datée, l'exemple chiffré, « Quels biens », les 3 points de vigilance.
+- Exemple chiffré : maison de 90 m² au prix moyen maison (appartement de 60 m² si le marché est surtout fait d'appartements). Calculs :
+  - Frais de notaire ancien = prix × 6,3185 % (5,80665 % pour un primo-accédant) + émoluments TTC + 1 200 € de débours + CSI (0,1 % du prix, 15 € minimum).
+  - Émoluments HT : 3,870 % jusqu'à 6 500 € ; 1,596 % de 6 500 à 17 000 € ; 1,064 % de 17 000 à 60 000 € ; 0,799 % au-delà. TTC = HT × 1,2.
+  - Emprunt = prix + frais − 15 000 € d'apport ; prêt 25 ans au taux indiqué sur la page ; assurance 0,30 %/an du capital.
+  - Revenus nécessaires = mensualité ÷ 0,35.
+  - **Vérifier chaque taux et chaque barème à la date du jour** avant de calculer ; s'ils ont changé, mettre à jour ce fichier (section ci-dessus) dans le même passage.
+- Faire les calculs avec un script (python/node), jamais de tête.
+
+## Structure d'un article pratique (`guide-<slug>.html`)
+- Même en-tête, pied de page, CSS et script `PARTNER_LINKS` qu'une page ville (copier `douai.html` puis remplacer le contenu de `<main>`).
+- `<main>` : fil d'Ariane (Accueil › Guides pratiques › titre), eyebrow « Guide pratique », h1, lede, 3 à 5 sections `<section class="block">` avec `<div class="prose">`, au moins un exemple chiffré sourcé, puis le bloc `.partner` adapté au sujet, puis une section « Sources » listant les liens consultés.
+- 800 à 1 400 mots.
+
+## Après chaque publication
+1. `index.html` : ajouter la carte juste au-dessus du marqueur
+   - ville : `<a class="ville" href="/<slug>"><b>Nom</b><small>Département</small></a>` au-dessus de `<!-- VILLES:FIN -->`
+   - article : `<a class="ville" href="/guide-<slug>"><b>Titre court</b><small>Guide pratique</small></a>` au-dessus de `<!-- ARTICLES:FIN -->`
+2. `sitemap.xml` : ajouter `<url><loc>https://brique-et-cle.netlify.app/<chemin></loc><lastmod>AAAA-MM-JJ</lastmod></url>`.
+3. `PLAN.md` : déplacer le sujet de « À publier » vers « Publiés » avec la date.
+4. Vérifier 1 à 2 minutes plus tard que l'URL publique répond (WebFetch) et que la page n'affiche aucun `{{` ni texte manquant.

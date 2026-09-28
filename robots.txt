@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brique-et-cle.netlify.app/sitemap.xml

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="google-site-verification" content="vr-8sbriql4JQpGYr8kKssEmagAtyaJm1dvpwovC-BI" />
+<title>Brique &amp; Clé</title>
+<meta name="description" content="Simulez votre capacité d'emprunt et vos frais de notaire pour acheter dans le Nord et le Pas-de-Calais.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface-2:#F5F7F9; --ink:#1C2127; --ink-2:#4B5663; --line:#D5DBE2;
+  --brick:#A8432A; --brick-ink:#FFFFFF; --brick-soft:#F4E3DD; --slate:#3E4C5B; --mortar:#E3E7EC;
+  --ok:#2F7A4F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+    --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+  --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo svg{flex:none}
+nav.main{display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav.main a:hover{color:var(--brick)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding-block:40px 64px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:34rem;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--ink-2)}
+.fact b{color:var(--ink)}
+.bond{height:14px;margin-top:36px;max-width:34rem;border-radius:2px;
+  background:
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 0 0/100% 6px no-repeat,
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 21px 8px/100% 6px no-repeat;opacity:.85}
+
+/* calculator card */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 40px -24px rgba(20,30,40,.35)}
+.calc h2{font-size:1.4rem}
+.calc .sub{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--ink-2)}
+input[type=number],select{font:inherit;font-variant-numeric:tabular-nums;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);width:100%}
+input[type=number]:focus,select:focus{border-color:var(--brick);outline:none;box-shadow:0 0 0 3px var(--brick-soft)}
+.check{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink)}
+.check input{width:18px;height:18px;accent-color:var(--brick)}
+.result{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result .big{grid-column:1/-1;background:var(--brick-soft);border-radius:10px;padding:14px 16px}
+.result .k{font-size:.8rem;color:var(--ink-2);font-weight:600}
+.result .v{font-family:var(--display);font-weight:700;font-size:1.35rem}
+.result .big .v{font-size:2rem;color:var(--brick)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brick);color:var(--brick-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 20px;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.wide{width:100%;margin-top:18px}
+.btn.ghost{background:transparent;color:var(--brick);border:2px solid var(--brick)}
+.fine{font-size:.78rem;color:var(--ink-2);margin-top:10px}
+
+/* sections */
+section.block{padding-block:64px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;max-width:44rem;margin-bottom:32px}
+.head p{color:var(--ink-2)}
+.notaire{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.breakdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;padding-block:10px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row span:first-child{color:var(--ink-2)}
+.row.total{border-bottom:0;font-weight:700;font-size:1.1rem;padding-top:14px}
+.row.total span:first-child{color:var(--ink)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:14px;background:var(--mortar)}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--brick)}
+.step p{color:var(--ink-2);font-size:.93rem}
+
+.partner{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--slate);color:var(--bg);border-radius:18px;padding:36px}
+.partner h2{color:var(--bg)}
+.partner p{opacity:.88;margin-top:10px}
+.partner ul{margin:14px 0 0;padding-left:20px;opacity:.92}
+.partner .ctas{display:flex;flex-direction:column;gap:12px}
+.partner .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+#guides:not(:has(a.ville)){display:none}
+.villes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ville{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.ville:hover{border-color:var(--brick)}
+.ville b{font-family:var(--display);font-size:1.05rem}
+.ville small{color:var(--ink-2)}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--ink-2);max-width:65ch}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-2);display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.warn{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:8px;padding:14px 16px;color:var(--ink);font-weight:600;margin-top:14px}
+
+@media (max-width:900px){
+  .hero,.notaire,.partner,footer{grid-template-columns:1fr}
+  .steps,.villes{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .grid2,.result,.steps,.villes{grid-template-columns:1fr}
+  .calc{padding:20px}
+  .partner{padding:24px}
+  nav.main{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="#top" aria-label="Brique &amp; Clé, accueil">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="-5" y="15" width="14" height="7" rx="1" fill="var(--brick)" transform="translate(7 0)"/>
+      <rect x="18" y="15" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <rect x="2" y="24" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <circle cx="25" cy="27.5" r="3.2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M28 27.5h4" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Brique &amp; Clé
+  </a>
+  <nav class="main" aria-label="Navigation principale">
+    <a href="#capacite">Capacité d'emprunt</a>
+    <a href="#notaire">Frais de notaire</a>
+    <a href="#etapes">Étapes</a>
+    <a href="#faq">Questions</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero" id="capacite">
+  <div>
+    <p class="eyebrow">Achat immobilier · Nord &amp; Pas-de-Calais</p>
+    <h1 style="margin-top:12px">Savoir ce que vous pouvez acheter, <em>avant</em> de visiter.</h1>
+    <p class="lede">Maison de corons à Lens, appartement à Arras ou longère près de Montreuil : calculez votre budget réel avec les règles bancaires et les taux de frais de notaire de nos deux départements, puis comparez gratuitement les offres de prêt.</p>
+    <div class="facts">
+      <span class="fact">Endettement max <b class="num">35 %</b></span>
+      <span class="fact">Droits de mutation 59/62 <b class="num">6,32 %</b></span>
+      <span class="fact">Taux moyen 20 ans <b class="num">≈ 3,5 %</b></span>
+    </div>
+    <div class="bond" aria-hidden="true"></div>
+  </div>
+
+  <form class="calc" id="capForm" novalidate>
+    <h2>Votre capacité d'emprunt</h2>
+    <p class="sub">Estimation instantanée, sans inscription.</p>
+    <div class="grid2">
+      <div class="field"><label for="rev">Revenus nets du foyer / mois</label><input id="rev" type="number" min="0" step="50" value="3200"></div>
+      <div class="field"><label for="chg">Crédits en cours / mois</label><input id="chg" type="number" min="0" step="10" value="150"></div>
+      <div class="field"><label for="app">Apport personnel</label><input id="app" type="number" min="0" step="500" value="15000"></div>
+      <div class="field"><label for="dur">Durée</label>
+        <select id="dur"><option value="15">15 ans</option><option value="20">20 ans</option><option value="25" selected>25 ans</option></select></div>
+      <div class="field full"><label for="tx">Taux du prêt (hors assurance, %)</label><input id="tx" type="number" min="0" max="10" step="0.05" value="3.60"></div>
+    </div>
+    <div class="result" aria-live="polite">
+      <div class="big"><div class="k">Prix de bien ancien accessible</div><div class="v num" id="rPrix">–</div></div>
+      <div><div class="k">Mensualité maximale</div><div class="v num" id="rMens">–</div></div>
+      <div><div class="k">Montant empruntable</div><div class="v num" id="rCap">–</div></div>
+    </div>
+    <a class="btn wide" href="#partenaire" data-partner="credit">Comparer les offres de prêt</a>
+    <p class="fine">Estimation indicative : 35 % d'endettement assurance comprise (règle HCSF), assurance estimée à 0,30 %/an, frais d'acquisition ancien d'environ 8 %. Seule une banque ou un courtier peut confirmer votre financement.</p>
+  </form>
+</section>
+
+<section class="block" id="notaire">
+  <div class="head">
+    <p class="eyebrow">Simulateur</p>
+    <h2>Frais de notaire dans le Nord et le Pas-de-Calais</h2>
+    <p>Depuis le 1<sup>er</sup> mai 2025, les deux départements appliquent des droits de mutation de 6,32 % dans l'ancien. Les primo-accédants restent à 5,81 %, et le neuf ne paie que 0,715 %.</p>
+  </div>
+  <div class="notaire">
+    <form class="calc" id="notForm" novalidate>
+      <div class="grid2" style="margin-top:0">
+        <div class="field full"><label for="nPrix">Prix d'achat du bien</label><input id="nPrix" type="number" min="0" step="1000" value="165000"></div>
+        <div class="field"><label for="nDep">Département</label>
+          <select id="nDep"><option value="62">Pas-de-Calais (62)</option><option value="59">Nord (59)</option></select></div>
+        <div class="field"><label for="nType">Type de bien</label>
+          <select id="nType"><option value="ancien">Ancien</option><option value="neuf">Neuf (VEFA)</option></select></div>
+        <div class="field full"><label class="check" for="nPrimo"><input id="nPrimo" type="checkbox"> Premier achat de résidence principale</label></div>
+      </div>
+    </form>
+    <div class="breakdown" aria-live="polite">
+      <div class="row"><span>Droits de mutation</span><span class="num" id="oDmto">–</span></div>
+      <div class="row"><span>Émoluments du notaire (TTC)</span><span class="num" id="oEmo">–</span></div>
+      <div class="row"><span>Débours et formalités (estimés)</span><span class="num" id="oDeb">–</span></div>
+      <div class="row"><span>Contribution de sécurité immobilière</span><span class="num" id="oCsi">–</span></div>
+      <div class="row total"><span>Total des frais</span><span class="num" id="oTot">–</span></div>
+      <div class="bar" aria-hidden="true"><i id="b1" style="background:var(--brick)"></i><i id="b2" style="background:var(--slate)"></i><i id="b3" style="background:var(--ink-2);opacity:.5"></i></div>
+      <div class="legend"><span><b style="background:var(--brick)"></b>Impôts reversés à l'État et aux collectivités</span><span><b style="background:var(--slate)"></b>Rémunération du notaire</span><span><b style="background:var(--ink-2);opacity:.5"></b>Frais annexes</span></div>
+      <p class="fine" id="oPct"></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="etapes">
+  <div class="head">
+    <p class="eyebrow">Le parcours</p>
+    <h2>Les quatre étapes d'un achat financé</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><h3>Chiffrer son budget</h3><p>Capacité d'emprunt, apport et frais de notaire : le vrai prix d'un achat, pas seulement celui de l'annonce.</p></div>
+    <div class="step"><h3>Faire jouer la concurrence</h3><p>L'écart entre banques peut dépasser 0,6 point sur une même durée. Un courtier compare pour vous.</p></div>
+    <div class="step"><h3>Recevoir l'offre de prêt</h3><p>La loi vous laisse un délai de réflexion de 10 jours avant de pouvoir l'accepter.</p></div>
+    <div class="step"><h3>Signer chez le notaire</h3><p>L'acte authentique vous remet les clés. Les frais calculés plus haut sont réglés ce jour-là.</p></div>
+  </div>
+</section>
+
+<section class="block" id="partenaire">
+  <div class="partner">
+    <div>
+      <p class="eyebrow" style="color:var(--bg);opacity:.75">Service gratuit</p>
+      <h2 style="margin-top:8px">Obtenez les meilleures conditions pour votre prêt</h2>
+      <p>Nos courtiers partenaires interrogent plusieurs banques à partir de votre situation et vous rappellent sous 48 h ouvrées.</p>
+      <ul>
+        <li>Crédit immobilier : résidence principale ou investissement locatif</li>
+        <li>Rachat et regroupement de crédits</li>
+        <li>Changement d'assurance emprunteur</li>
+      </ul>
+    </div>
+    <div class="ctas">
+      <a class="btn" href="#partenaire" data-partner="credit" rel="sponsored noopener">Comparer les taux de crédit</a>
+      <a class="btn ghost" href="#partenaire" data-partner="rachat" rel="sponsored noopener">Étudier un rachat de crédits</a>
+      <a class="btn ghost" href="#partenaire" data-partner="assurance" rel="sponsored noopener">Réduire mon assurance de prêt</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="villes">
+  <div class="head">
+    <p class="eyebrow">Guides locaux</p>
+    <h2>Acheter dans votre ville</h2>
+    <p>Quartiers, types de biens et points de vigilance, ville par ville.</p>
+  </div>
+  <div class="villes">
+    <a class="ville" href="/arras"><b>Arras</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/lens"><b>Lens</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/bethune"><b>Béthune</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/henin-beaumont"><b>Hénin-Beaumont</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/calais"><b>Calais</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/boulogne-sur-mer"><b>Boulogne-sur-Mer</b><small>Pas-de-Calais</small></a>
+    <a class="ville" href="/douai"><b>Douai</b><small>Nord</small></a>
+    <a class="ville" href="/lille"><b>Lille</b><small>Nord</small></a>
+    <!-- VILLES:FIN -->
+  </div>
+</section>
+
+<section class="block" id="guides">
+  <div class="head">
+    <p class="eyebrow">Guides pratiques</p>
+    <h2>Préparer son achat, étape par étape</h2>
+    <p>Aides, frais, démarches : l'essentiel pour acheter sans mauvaise surprise.</p>
+  </div>
+  <div class="villes">
+    <!-- ARTICLES:FIN -->
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="head"><p class="eyebrow">Questions fréquentes</p><h2>Ce que les acheteurs nous demandent</h2></div>
+  <details open><summary>Pourquoi les frais de notaire ont-ils augmenté dans le Nord et le Pas-de-Calais ?</summary>
+    <p>La loi de finances pour 2025 a permis aux départements de relever leur taux de droits de mutation de 4,50 % à 5 %. Le Pas-de-Calais et le Nord l'appliquent depuis le 1<sup>er</sup> mai 2025, ce qui porte le taux global à environ 6,32 % du prix dans l'ancien.</p></details>
+  <details><summary>Je n'ai jamais été propriétaire : suis-je concerné par la hausse ?</summary>
+    <p>Non. Pour l'achat de votre résidence principale, si vous n'avez pas été propriétaire de votre résidence principale au cours des deux dernières années, le taux reste à environ 5,81 %. Votre notaire vérifie ces conditions, notamment en cas d'achat à deux.</p></details>
+  <details><summary>Pourquoi le neuf coûte-t-il moins cher en frais ?</summary>
+    <p>Dans le neuf (VEFA), la taxe de publicité foncière n'est que de 0,715 % : les frais d'acquisition tombent autour de 2 à 3 % du prix, contre 7 à 8 % dans l'ancien.</p></details>
+  <details><summary>Combien coûte le service de comparaison ?</summary>
+    <p>Rien pour vous. Brique &amp; Clé est rémunéré par ses partenaires lorsque vous faites une demande via nos liens. Aucun versement ne peut être exigé d'un particulier avant l'obtention de son prêt.</p></details>
+</section>
+</main>
+
+<footer>
+  <div>
+    <h3>Brique &amp; Clé</h3>
+    <p>Outils gratuits pour préparer un achat immobilier dans les Hauts-de-France.</p>
+    <p class="warn">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+    <p style="margin-top:12px">Liens partenaires : certains liens de ce site sont rémunérés. Brique &amp; Clé n'est ni une banque ni un courtier et ne donne pas de conseil en crédit ; nous vous orientons vers des intermédiaires immatriculés à l'ORIAS.</p>
+  </div>
+  <div>
+    <h3>Mentions légales</h3>
+    <p>Éditeur : Sonia ALVES LOPES, entrepreneur individuel (ALS Nova Gestion)<br>2B rue Notre Dame de Tongre, 62580 Arleux-en-Gohelle<br>SIREN 109 176 784<br>TVA non applicable, art. 293 B du CGI</p>
+    <p style="margin-top:10px">Sources des taux : barèmes DGFiP 2026, délibérations départementales de mars 2025, baromètres des courtiers de septembre 2026. Simulations indicatives, sans valeur d'offre.</p>
+  </div>
+</footer>
+</div>
+
+<script>
+// Remplacez ces adresses par vos liens d'affiliation une fois inscrite aux programmes.
+const PARTNER_LINKS = { credit: "", rachat: "", assurance: "" };
+document.querySelectorAll("[data-partner]").forEach(a => {
+  const url = PARTNER_LINKS[a.dataset.partner];
+  if (url) { a.href = url; a.target = "_blank"; }
+});
+
+const eur = n => isFinite(n) && n > 0 ? Math.round(n).toLocaleString("fr-FR") + " €" : "0 €";
+const val = id => parseFloat(document.getElementById(id).value) || 0;
+const set = (id, t) => document.getElementById(id).textContent = t;
+
+function capacite(){
+  const rev = val("rev"), chg = val("chg"), app = val("app"), n = val("dur") * 12, t = val("tx") / 100 / 12;
+  const mens = Math.max(0, rev * 0.35 - chg);
+  const ins = 0.003 / 12;
+  const factor = (t > 0 ? t / (1 - Math.pow(1 + t, -n)) : 1 / n) + ins;
+  const cap = mens / factor;
+  const budget = cap + app;
+  const prix = budget / 1.08;
+  set("rMens", eur(mens)); set("rCap", eur(cap)); set("rPrix", eur(prix));
+}
+
+function emoluments(p){
+  const tr = [[6500, .0387], [17000, .01596], [60000, .01064], [Infinity, .00799]];
+  let prev = 0, ht = 0;
+  for (const [lim, r] of tr){ if (p > prev){ ht += (Math.min(p, lim) - prev) * r; } prev = lim; }
+  return ht * 1.2;
+}
+function notaire(){
+  const p = val("nPrix"), type = document.getElementById("nType").value, primo = document.getElementById("nPrimo").checked;
+  document.getElementById("nPrimo").disabled = type === "neuf";
+  const rate = type === "neuf" ? 0.00715 : (primo ? 0.0580665 : 0.063185);
+  const dmto = p * rate, emo = emoluments(p), deb = p > 0 ? 1200 : 0, csi = p > 0 ? Math.max(15, p * 0.001) : 0;
+  const tot = dmto + emo + deb + csi;
+  set("oDmto", eur(dmto)); set("oEmo", eur(emo)); set("oDeb", eur(deb)); set("oCsi", eur(csi)); set("oTot", eur(tot));
+  const pct = x => tot ? (x / tot * 100) + "%" : "0%";
+  document.getElementById("b1").style.width = pct(dmto + csi);
+  document.getElementById("b2").style.width = pct(emo);
+  document.getElementById("b3").style.width = pct(deb);
+  set("oPct", p ? "Soit " + (tot / p * 100).toLocaleString("fr-FR", {maximumFractionDigits: 1}) + " % du prix. Taux appliqué : " + (rate * 100).toLocaleString("fr-FR", {maximumFractionDigits: 3}) + " %. Estimation, le montant exact est fixé par votre notaire." : "");
+}
+
+["rev","chg","app","dur","tx"].forEach(id => document.getElementById(id).addEventListener("input", capacite));
+["nPrix","nDep","nType","nPrimo"].forEach(id => document.getElementById(id).addEventListener("input", notaire));
+document.querySelectorAll("form").forEach(f => f.addEventListener("submit", e => e.preventDefault()));
+capacite(); notaire();
+</script>
+</body>
+</html>
