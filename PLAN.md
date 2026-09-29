@@ -5,7 +5,6 @@ Quand il reste moins de 8 sujets à publier, il en ajoute 15 nouveaux (villes du
 Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immobilier, assurance emprunteur, rachat de crédits.
 
 ## À publier
-- [ ] article : guide-changer-assurance-emprunteur — Changer d'assurance de prêt immobilier : règles, étapes et économies
 - [ ] ville : lievin (62800) — Liévin
 - [ ] article : guide-capacite-emprunt — Capacité d'emprunt : la règle des 35 % et comment la calculer
 - [ ] ville : valenciennes (59300) — Valenciennes
@@ -35,6 +34,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-09-28 → /boulogne-sur-mer — Boulogne-sur-Mer (62200)
 - [x] 2026-09-28 → /douai — Douai (59500)
 - [x] 2026-09-28 → /lille — Lille (59000)
+- [x] 2026-09-29 → /guide-changer-assurance-emprunteur — Changer d'assurance de prêt immobilier : règles, étapes et économies
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville, source meilleursagents.com/prix-immobilier/<ville>-<cp>/
