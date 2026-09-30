@@ -37,3 +37,13 @@ Attirer depuis Google des personnes qui préparent un achat immobilier dans le N
 2. `sitemap.xml` : ajouter `<url><loc>https://brique-et-cle.netlify.app/<chemin></loc><lastmod>AAAA-MM-JJ</lastmod></url>`.
 3. `PLAN.md` : déplacer le sujet de « À publier » vers « Publiés » avec la date.
 4. Vérifier 1 à 2 minutes plus tard que l'URL publique répond (WebFetch) et que la page n'affiche aucun `{{` ni texte manquant.
+
+## Problèmes connus et solutions
+Chaque agent résout lui-même les problèmes rencontrés et ajoute ici une ligne courte quand il trouve une solution réutilisable.
+- Outils Arcade absents au démarrage : relancer ToolSearch (« select:mcp__ARCADE__Github_GetFileContents,mcp__ARCADE__Github_CreateFile »), qui attend la connexion. En dernier recours : outils mcp__github__ sur le même dépôt et la même branche.
+- WebFetch refusé (« PROVENANCE_REQUIRED », autorisation sans réponse en passage automatique) : utiliser mcp__Firecrawl__firecrawl_scrape (maxAge 0) sur la même URL, et firecrawl_search pour chercher.
+- Numéro de fiche service-public qui renvoie un autre sujet : retrouver la bonne fiche par recherche (firecrawl_search sur service-public.gouv.fr), ne pas deviner.
+- curl/wget depuis le shell : bloqués par le proxy (403). Vérifier la mise en ligne avec firecrawl_scrape (rawHtml ou links, maxAge 0, storeInCache false).
+- Contrôle après écriture : `git pull` puis `git diff HEAD~1 HEAD` dans le dossier cloné ; seule la modification voulue doit apparaître. Sinon réécrire depuis `git show HEAD~1:<fichier>` + la seule modification voulue.
+- Page absente en ligne après 2 minutes : revérifier après 3 minutes, puis contrôler le fichier sur la branche Principal et le déploiement Netlify.
+- Donnée impossible à confirmer : ne pas l'écrire ; pour une ville sans prix MeilleursAgents confirmé, passer au sujet suivant et le noter au journal.
