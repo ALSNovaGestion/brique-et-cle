@@ -47,3 +47,5 @@ Chaque agent résout lui-même les problèmes rencontrés et ajoute ici une lign
 - Contrôle après écriture : `git pull` puis `git diff HEAD~1 HEAD` dans le dossier cloné ; seule la modification voulue doit apparaître. Sinon réécrire depuis `git show HEAD~1:<fichier>` + la seule modification voulue.
 - Page absente en ligne après 2 minutes : revérifier après 3 minutes, puis contrôler le fichier sur la branche Principal et le déploiement Netlify.
 - Donnée impossible à confirmer : ne pas l'écrire ; pour une ville sans prix MeilleursAgents confirmé, passer au sujet suivant et le noter au journal.
+- Ajout d'une ligne dans un gros fichier (index.html, sitemap.xml, PLAN.md, JOURNAL.md) : utiliser mcp__ARCADE__Github_UpdateFileLines (remplacer la ligne du marqueur par « nouvelle ligne + marqueur », ou mode append) plutôt que réécrire tout le fichier ; construire d'abord le contenu attendu par script, puis après `git pull` le comparer octet pour octet (`cmp`).
+- Les pages modèles contiennent des espaces fines insécables (U+202F) dans certains montants : pour un remplacement par script, les rechercher avec ce caractère, pas avec une espace simple.
