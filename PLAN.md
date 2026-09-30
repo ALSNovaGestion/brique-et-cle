@@ -5,7 +5,6 @@ Quand il reste moins de 8 sujets à publier, il en ajoute 15 nouveaux (villes du
 Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immobilier, assurance emprunteur, rachat de crédits.
 
 ## À publier
-- [ ] ville : lievin (62800) — Liévin
 - [ ] article : guide-capacite-emprunt — Capacité d'emprunt : la règle des 35 % et comment la calculer
 - [ ] ville : valenciennes (59300) — Valenciennes
 - [ ] article : guide-rachat-de-credits — Rachat de crédits : dans quels cas il est utile et comment ça se passe
