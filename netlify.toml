@@ -1,0 +1,4 @@
+# Netlify : ne pas redéployer quand seuls des fichiers .md (journal, plan, charte) changent.
+# Chaque déploiement de production consomme des crédits Netlify (15 crédits sur le forfait gratuit).
+[build]
+  ignore = '[ -n "$CACHED_COMMIT_REF" ] && git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ":(exclude)*.md"'
