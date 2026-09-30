@@ -35,10 +35,11 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-09-28 → /douai — Douai (59500)
 - [x] 2026-09-28 → /lille — Lille (59000)
 - [x] 2026-09-29 → /guide-changer-assurance-emprunteur — Changer d'assurance de prêt immobilier : règles, étapes et économies
+- [x] 2026-09-30 → /lievin — Liévin (62800)
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville, source meilleursagents.com/prix-immobilier/<ville>-<cp>/
-- Taux moyens de crédit (index.html : « Taux moyen 20 ans », valeur par défaut du simulateur ; pages ville : taux de l'exemple) — dernière valeur : ≈ 3,5 % sur 20 ans, 3,6 % utilisé sur 25 ans (sept. 2026)
+- Taux moyens de crédit (index.html : « Taux moyen 20 ans », valeur par défaut du simulateur ; pages ville : taux de l'exemple) — dernière valeur : ≈ 3,5 % sur 20 ans, 3,6 % utilisé sur 25 ans (sept. 2026) ; baromètre Meilleurtaux d'octobre 2026 : 3,64 % sur 20 ans, 3,73 % sur 25 ans (« bon taux ») → 3,7 % utilisé sur 25 ans à partir de /lievin
 - Droits de mutation 59 et 62 : 6,3185 % (5,80665 % primo-accédant), neuf 0,715 % — en vigueur depuis le 1er mai 2025
 - Règle HCSF : 35 % d'endettement, 25 ans maximum
 - DPE location : G interdit depuis 2025, F en 2028, E en 2034
