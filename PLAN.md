@@ -37,8 +37,9 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-10-02 → /valenciennes — Valenciennes (59300)
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
-- Prix au m² et loyers : chaque page ville, source meilleursagents.com/prix-immobilier/<ville>-<cp>/
-- Taux moyens de crédit (index.html : « Taux moyen 20 ans », valeur par défaut du simulateur ; pages ville : taux de l'exemple) — dernière valeur : ≈ 3,5 % sur 20 ans, 3,6 % utilisé sur 25 ans (sept. 2026) ; baromètre Meilleurtaux d'octobre 2026 : 3,64 % sur 20 ans, 3,73 % sur 25 ans (« bon taux ») → 3,7 % utilisé sur 25 ans à partir de /lievin
-- Droits de mutation 59 et 62 : 6,3185 % (5,80665 % primo-accédant), neuf 0,715 % — en vigueur depuis le 1er mai 2025
-- Règle HCSF : 35 % d'endettement, 25 ans maximum
-- DPE location : G interdit depuis 2025, F en 2028, E en 2034
+- Prix au m² et loyers : chaque page ville, source meilleursagents.com/prix-immobilier/<ville>-<cp>/ — contrôlés le 2026-10-02 : les 10 pages ville affichent les estimations MeilleursAgents au 1er octobre 2026
+- Taux moyens de crédit (index.html : « Taux moyen 20 ans », valeur par défaut du simulateur ; pages ville : taux de l'exemple) — contrôlés le 2026-10-02 sur les baromètres datés du 1er octobre 2026 : 20 ans ≈ 3,5 % (Meilleurtaux 3,50 à 3,55 %, CAFPI 3,51 %, Pretto 3,50 à 3,66 % selon les rubriques), inchangé ; 25 ans ≈ 3,6 % (Meilleurtaux 3,60 à 3,65 %, CAFPI 3,59 %, Pretto 3,62 à 3,75 %) → 3,6 % conservé sur 25 ans (valeur par défaut du simulateur et 8 pages ville) ; /lievin et /valenciennes restent à 3,7 % (écart à trancher par Sonia ; grille Meilleurtaux 25 ans au 1er octobre : « très bon taux » 3,7 %, « bon taux » 3,93 %)
+- Droits de mutation 59 et 62 : 6,3185 % (5,80665 % primo-accédant), neuf 0,715 % — en vigueur depuis le 1er mai 2025 ; confirmés le 2026-10-02 (tableau DGFiP des taux applicables au 1er juin 2026 : Nord et Pas-de-Calais 5,00 %, 4,50 % pour un primo-accédant ; impots.gouv.fr : taux global maximal 6,32 % jusqu'au 31 mars 2028, taux réduit 0,70 % + frais d'assiette 2,14 % dans le neuf)
+- Barème des émoluments de notaire (vente) : 3,870 % / 1,596 % / 1,064 % / 0,799 %, TVA 20 % — confirmé le 2026-10-02 (service-public.gouv.fr, fiche F17701 vérifiée le 5 août 2026, tarifs applicables jusqu'au 29 février 2028)
+- Règle HCSF : 35 % d'endettement, 25 ans maximum — confirmée le 2026-10-02 (economie.gouv.fr)
+- DPE location : G interdit depuis 2025, F en 2028, E en 2034 — confirmé le 2026-10-02 (ecologie.gouv.fr et service-public.gouv.fr)
