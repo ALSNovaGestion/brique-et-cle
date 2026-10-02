@@ -35,6 +35,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-09-29 → /guide-changer-assurance-emprunteur — Changer d'assurance de prêt immobilier : règles, étapes et économies
 - [x] 2026-09-30 → /lievin — Liévin (62800)
 - [x] 2026-09-30 → /guide-capacite-emprunt — Capacité d'emprunt : la règle des 35 % et comment la calculer
+- [x] 2026-10-02 → /valenciennes — Valenciennes (59300)
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville, source meilleursagents.com/prix-immobilier/<ville>-<cp>/
