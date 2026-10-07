@@ -35,6 +35,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-09-30 → /guide-capacite-emprunt — Capacité d'emprunt : la règle des 35 % et comment la calculer
 - [x] 2026-10-02 → /valenciennes — Valenciennes (59300)
 - [x] 2026-10-06 → /guide-rachat-de-credits — Rachat de crédits : dans quels cas il est utile et comment ça se passe
+- [x] 2026-10-07 → /dunkerque — Dunkerque (59140)
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville (cartes de prix, ligne « Source », exemple chiffré, mois de la balise meta description) et date lastmod de la page dans sitemap.xml, source meilleursagents.com/prix-immobilier/<ville>-<cp>/ — contrôlés le 2026-10-02 : les 10 pages ville affichent les estimations MeilleursAgents au 1er octobre 2026
