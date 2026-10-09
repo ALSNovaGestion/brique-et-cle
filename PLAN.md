@@ -5,7 +5,6 @@ Quand il reste moins de 8 sujets à publier, il en ajoute 15 nouveaux (villes du
 Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immobilier, assurance emprunteur, rachat de crédits.
 
 ## À publier
-- [ ] article : guide-ptz — Prêt à taux zéro : conditions et montants pour acheter dans le Nord et le Pas-de-Calais
 - [ ] ville : bruay-la-buissiere (62700) — Bruay-la-Buissière
 - [ ] article : guide-frais-de-notaire-primo-accedant — Frais de notaire : ce que paie un premier achat dans le 59 et le 62
 - [ ] ville : saint-omer (62500) — Saint-Omer
