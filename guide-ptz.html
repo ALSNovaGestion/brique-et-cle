@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PTZ dans le Nord et le Pas-de-Calais : conditions, zones et montants | Brique &amp; Clé</title>
+<meta name="description" content="PTZ en octobre 2026 : logements concernés, zone de votre commune du Nord ou du Pas-de-Calais, plafonds de revenus, calcul du montant et exemple chiffré.">
+<link rel="canonical" href="https://brique-et-cle.netlify.app/guide-ptz">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface-2:#F5F7F9; --ink:#1C2127; --ink-2:#4B5663; --line:#D5DBE2;
+  --brick:#A8432A; --brick-ink:#FFFFFF; --brick-soft:#F4E3DD; --slate:#3E4C5B; --mortar:#E3E7EC;
+  --ok:#2F7A4F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+    --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+  --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo svg{flex:none}
+nav.main{display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav.main a:hover{color:var(--brick)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding-block:40px 64px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:34rem;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--ink-2)}
+.fact b{color:var(--ink)}
+.bond{height:14px;margin-top:36px;max-width:34rem;border-radius:2px;
+  background:
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 0 0/100% 6px no-repeat,
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 21px 8px/100% 6px no-repeat;opacity:.85}
+
+/* calculator card */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 40px -24px rgba(20,30,40,.35)}
+.calc h2{font-size:1.4rem}
+.calc .sub{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--ink-2)}
+input[type=number],select{font:inherit;font-variant-numeric:tabular-nums;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);width:100%}
+input[type=number]:focus,select:focus{border-color:var(--brick);outline:none;box-shadow:0 0 0 3px var(--brick-soft)}
+.check{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink)}
+.check input{width:18px;height:18px;accent-color:var(--brick)}
+.result{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result .big{grid-column:1/-1;background:var(--brick-soft);border-radius:10px;padding:14px 16px}
+.result .k{font-size:.8rem;color:var(--ink-2);font-weight:600}
+.result .v{font-family:var(--display);font-weight:700;font-size:1.35rem}
+.result .big .v{font-size:2rem;color:var(--brick)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brick);color:var(--brick-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 20px;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.wide{width:100%;margin-top:18px}
+.btn.ghost{background:transparent;color:var(--brick);border:2px solid var(--brick)}
+.fine{font-size:.78rem;color:var(--ink-2);margin-top:10px}
+
+/* sections */
+section.block{padding-block:64px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;max-width:44rem;margin-bottom:32px}
+.head p{color:var(--ink-2)}
+.notaire{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.breakdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;padding-block:10px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row span:first-child{color:var(--ink-2)}
+.row.total{border-bottom:0;font-weight:700;font-size:1.1rem;padding-top:14px}
+.row.total span:first-child{color:var(--ink)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:14px;background:var(--mortar)}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--brick)}
+.step p{color:var(--ink-2);font-size:.93rem}
+
+.partner{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--slate);color:var(--bg);border-radius:18px;padding:36px}
+.partner h2{color:var(--bg)}
+.partner p{opacity:.88;margin-top:10px}
+.partner ul{margin:14px 0 0;padding-left:20px;opacity:.92}
+.partner .ctas{display:flex;flex-direction:column;gap:12px}
+.partner .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+.villes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ville{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.ville:hover{border-color:var(--brick)}
+.ville b{font-family:var(--display);font-size:1.05rem}
+.ville small{color:var(--ink-2)}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--ink-2);max-width:65ch}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-2);display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.warn{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:8px;padding:14px 16px;color:var(--ink);font-weight:600;margin-top:14px}
+
+@media (max-width:900px){
+  .hero,.notaire,.partner,footer{grid-template-columns:1fr}
+  .steps,.villes{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .grid2,.result,.steps,.villes{grid-template-columns:1fr}
+  .calc{padding:20px}
+  .partner{padding:24px}
+  nav.main{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+.crumbs{font-size:.88rem;color:var(--ink-2);padding-top:8px}
+.crumbs a{color:var(--ink-2)}
+.cityhero{padding-block:32px 40px;max-width:46rem}
+.cityhero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.price .k{font-size:.82rem;color:var(--ink-2);font-weight:600}
+.price .v{font-family:var(--display);font-weight:700;font-size:1.7rem;margin-top:4px}
+.price small{color:var(--ink-2);font-size:.8rem}
+.prose{max-width:65ch;display:flex;flex-direction:column;gap:14px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.src{font-size:.8rem;color:var(--ink-2);margin-top:14px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+@media (max-width:520px){.prices{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="/" aria-label="Brique &amp; Clé, accueil">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="2" y="15" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="15" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <rect x="2" y="24" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <circle cx="25" cy="27.5" r="3.2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M28 27.5h4" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Brique &amp; Clé
+  </a>
+  <nav class="main" aria-label="Navigation principale">
+    <a href="/#capacite">Capacité d'emprunt</a>
+    <a href="/#notaire">Frais de notaire</a>
+    <a href="/#villes">Villes</a>
+    <a href="/#faq">Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumbs"><a href="/">Accueil</a> › <a href="/#guides">Guides pratiques</a> › Prêt à taux zéro</p>
+<section class="cityhero">
+  <p class="eyebrow">Guide pratique</p>
+  <h1>Prêt à taux zéro : conditions et montants pour acheter dans le Nord et le Pas-de-Calais</h1>
+  <p class="lede">Le prêt à taux zéro (PTZ) finance une partie de l'achat de votre résidence principale, sans intérêts ni frais de dossier. Dans le Nord et le Pas-de-Calais, ce qu'il permet dépend surtout de la commune : logement neuf partout, logement ancien avec travaux dans une partie des communes seulement. Voici les règles en vigueur en octobre 2026.</p>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Le principe</p>
+    <h2>Ce qu'est le PTZ et qui peut l'obtenir</h2>
+    <p>Le PTZ est un prêt aidé par l'État. Vous remboursez exactement la somme empruntée, sur 25 ans au plus.</p>
+    <p>Il ne finance jamais tout l'achat : il complète au moins un autre prêt, par exemple un prêt bancaire classique. Un seul PTZ est accordé par opération.</p>
+    <p>Trois conditions à remplir :</p>
+    <ul>
+      <li><b>Ne pas avoir été propriétaire de votre résidence principale</b> au cours des deux années qui précèdent l'offre de prêt. Des exceptions existent, notamment si un occupant détient une carte mobilité inclusion portant la mention invalidité ou perçoit l'AAH ou l'AEEH.</li>
+      <li><b>Habiter le logement</b> : il devient votre résidence principale au plus tard un an après l'achat ou la fin des travaux, occupée au moins huit mois par an.</li>
+      <li><b>Respecter un plafond de revenus</b>, détaillé plus bas.</li>
+    </ul>
+    <p>Seules les banques qui ont signé une convention avec l'État distribuent le PTZ. Chacune étudie librement votre dossier et n'est pas obligée de l'accorder.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les logements concernés</p>
+    <h2>Neuf partout, ancien avec travaux en zone B2 ou C</h2>
+    <ul>
+      <li><b>Logement neuf</b> : appartement ou maison, achat ou construction, dans toutes les communes. Cet élargissement vaut pour les offres de prêt émises du 1<sup>er</sup> avril 2025 au 31 décembre 2027.</li>
+      <li><b>Logement ancien avec travaux</b> : uniquement dans une commune classée en zone B2 ou C.</li>
+      <li><b>Cas particuliers</b> : achat du logement social que vous occupez, location-accession, bail réel solidaire, transformation d'un local en logement.</li>
+    </ul>
+    <p>Dans l'ancien, trois règles s'ajoutent :</p>
+    <ul>
+      <li>Les travaux doivent représenter au moins 25 % du coût total de l'opération. L'installation d'un chauffage au gaz, au fioul ou au charbon ne compte pas, ni les travaux financés par un éco-PTZ.</li>
+      <li>Le logement doit atteindre au moins la classe D du diagnostic de performance énergétique, au besoin grâce aux travaux.</li>
+      <li>Les travaux commencent après l'obtention du PTZ et doivent être terminés dans les trois ans qui suivent l'offre de prêt.</li>
+    </ul>
+    <p>Depuis le 21 mars 2025, le PTZ peut se cumuler avec les aides de l'Anah.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Dans le 59 et le 62</p>
+    <h2>Dans quelle zone se trouve votre commune ?</h2>
+    <p>Un arrêté ministériel classe chaque commune dans une zone, de A (marché le plus tendu) à C. La liste officielle en vigueur depuis le 26 juin 2026 recense 1&#8239;534 communes dans le Nord et le Pas-de-Calais :</p>
+    <ul>
+      <li><b>Zone A, 11 communes</b> : Lille, Bondues, Lambersart, Loos, La Madeleine, Marcq-en-Barœul, Mouvaux, Saint-André-lez-Lille, Wambrechies, Wasquehal et Le Touquet-Paris-Plage.</li>
+      <li><b>Zone B1, 118 communes</b>, dont Roubaix, Tourcoing, Villeneuve-d'Ascq, Armentières, Dunkerque, Valenciennes, Douai, Cambrai, Arras, Lens, Liévin, Béthune, Calais, Boulogne-sur-Mer, Saint-Omer et Carvin.</li>
+      <li><b>Zone B2, 399 communes</b>, dont Hénin-Beaumont, Maubeuge et Bruay-la-Buissière.</li>
+      <li><b>Zone C, 1&#8239;006 communes</b> : le reste des deux départements.</li>
+    </ul>
+    <p>Conséquence : à <a href="/lille">Lille</a>, <a href="/arras">Arras</a>, <a href="/lens">Lens</a> ou <a href="/dunkerque">Dunkerque</a>, le PTZ ne finance pas l'achat d'un logement ancien, même avec travaux, hors cas particuliers. Il reste ouvert au neuf. À <a href="/henin-beaumont">Hénin-Beaumont</a> et dans les autres communes des zones B2 et C, il finance aussi l'ancien avec travaux.</p>
+    <p>Le classement évolue. L'arrêté du 5 septembre 2025 a fait passer 23 communes des deux départements de la zone B2 à la zone B1, dont Cambrai, Saint-Omer, Liévin et Carvin. Vérifiez la zone de votre commune avec le <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R66187" rel="noopener">simulateur de Service-public</a>.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les plafonds</p>
+    <h2>Revenus : les plafonds à ne pas dépasser</h2>
+    <p>Le calcul retient les revenus fiscaux de référence de l'année N-2 de tous les futurs occupants : pour une offre émise en 2026, ceux de 2024, inscrits sur l'avis d'imposition reçu en 2025. Si le coût total de l'opération divisé par 9 donne un montant plus élevé, c'est ce montant qui est retenu.</p>
+    <p>Plafonds pour un foyer de 1, 2, 3 ou 4 personnes :</p>
+    <ul>
+      <li><b>Zone A</b> : 49&#8239;000 €, 73&#8239;500 €, 88&#8239;200 € et 102&#8239;900 €.</li>
+      <li><b>Zone B1</b> : 34&#8239;500 €, 51&#8239;750 €, 62&#8239;100 € et 72&#8239;450 €.</li>
+      <li><b>Zone B2</b> : 31&#8239;500 €, 47&#8239;250 €, 56&#8239;700 € et 66&#8239;150 €.</li>
+      <li><b>Zone C</b> : 28&#8239;500 €, 42&#8239;750 €, 51&#8239;300 € et 59&#8239;850 €.</li>
+    </ul>
+    <h2 style="margin-top:18px">Comment le montant est calculé</h2>
+    <ul>
+      <li><b>1. Le coût de l'opération</b> : prix d'achat ou de construction, travaux et honoraires de négociation. Les frais de notaire n'en font pas partie. Ce coût est retenu dans la limite d'un plafond. Pour trois personnes : 270&#8239;000 € en zone A, 243&#8239;000 € en zone B1, 198&#8239;000 € en zone B2 et 180&#8239;000 € en zone C.</li>
+      <li><b>2. Votre tranche de revenus</b> : divisez vos revenus par un coefficient familial, soit 1 pour une personne, 1,5 pour deux, 1,8 pour trois, 2,1 pour quatre et 2,4 à partir de cinq. Limites des tranches 1 à 4 : zone A, 25&#8239;000 €, 31&#8239;000 €, 37&#8239;000 € et 49&#8239;000 € ; zone B1, 21&#8239;500 €, 26&#8239;000 €, 30&#8239;000 € et 34&#8239;500 € ; zone B2, 18&#8239;000 €, 22&#8239;500 €, 27&#8239;000 € et 31&#8239;500 € ; zone C, 15&#8239;000 €, 19&#8239;500 €, 24&#8239;000 € et 28&#8239;500 €.</li>
+      <li><b>3. Le pourcentage appliqué</b> : 50 % en tranche 1, 40 % en tranches 2 et 3, 20 % en tranche 4. Pour une maison individuelle neuve, ces pourcentages sont de 30 %, 20 %, 20 % et 10 %.</li>
+    </ul>
+    <p>Pour trois personnes en tranche 1, cela donne au plus 135&#8239;000 € pour un appartement neuf à Lille (zone A), 121&#8239;500 € en zone B1 et 54&#8239;000 € pour une maison neuve en zone C.</p>
+    <p>Le PTZ ne peut pas dépasser le montant des autres prêts de plus de deux ans qui financent l'achat (25 % de plus en tranche 1). Le remboursement dépend aussi de la tranche :</p>
+    <ul>
+      <li><b>Tranche 1</b> : 10 ans sans remboursement, puis 15 ans de mensualités.</li>
+      <li><b>Tranche 2</b> : 8 ans sans remboursement, puis 12 ans.</li>
+      <li><b>Tranche 3</b> : 2 ans sans remboursement, puis 13 ans.</li>
+      <li><b>Tranche 4</b> : pas de différé, remboursement sur 10 ans.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="sim">
+    <div class="prose">
+      <p class="eyebrow">Exemple chiffré</p>
+      <h2>Une maison ancienne avec travaux en zone B2</h2>
+      <p>Un couple avec un enfant achète une maison ancienne à Hénin-Beaumont, commune de zone B2 : 120&#8239;000 € pour la maison et 45&#8239;000 € de travaux. Les travaux pèsent 27 % de l'opération. Le foyer a déclaré 36&#8239;000 € de revenu fiscal de référence pour 2024.</p>
+      <p>36&#8239;000 € divisés par 1,8 donnent 20&#8239;000 € : le foyer est en tranche 2. Le PTZ peut atteindre 40 % de l'opération, sans remboursement pendant 8 ans, puis 458 € par mois pendant 12 ans.</p>
+      <p>À titre de comparaison, la même somme empruntée à 3,5 % sur 20 ans coûterait environ 25&#8239;866 € d'intérêts. Environ 3,5 %, c'est le taux moyen sur 20 ans relevé début octobre 2026 par les baromètres Meilleurtaux et CAFPI.</p>
+      <a class="btn" href="/#capacite" style="align-self:flex-start">Simuler mon budget</a>
+    </div>
+    <div class="breakdown">
+      <div class="row"><span>Coût de l'opération, hors frais de notaire</span><span class="num">165&#8239;000 €</span></div>
+      <div class="row"><span>Plafond d'opération, 3 personnes en zone B2</span><span class="num">198&#8239;000 €</span></div>
+      <div class="row"><span>Plafond de revenus, 3 personnes en zone B2</span><span class="num">56&#8239;700 €</span></div>
+      <div class="row"><span>Revenus divisés par 1,8 (tranche 2)</span><span class="num">20&#8239;000 €</span></div>
+      <div class="row"><span>Montant maximal du PTZ (40 %)</span><span class="num">66&#8239;000 €</span></div>
+      <div class="row"><span>Mensualité du PTZ, de la 9<sup>e</sup> à la 20<sup>e</sup> année</span><span class="num">458 €</span></div>
+      <div class="row total"><span>Intérêts d'un prêt classique du même montant</span><span class="num">25&#8239;866 €</span></div>
+      <p class="fine">Calcul indicatif : comparaison avec un prêt de 66&#8239;000 € à 3,5 % sur 20 ans, à mensualités constantes, hors assurance. Le reste de l'opération (99&#8239;000 €) et les frais de notaire sont financés par le prêt principal et l'apport. Seule une banque peut confirmer votre droit au PTZ.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Mode d'emploi</p>
+    <h2>Les étapes pour demander un PTZ</h2>
+    <ul>
+      <li><b>1. Vérifiez la zone</b> de la commune visée et rassemblez les avis d'imposition de tous les futurs occupants.</li>
+      <li><b>2. Estimez le montant</b> avec le <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R2974" rel="noopener">simulateur officiel</a>.</li>
+      <li><b>3. Dans l'ancien, faites chiffrer les travaux avant de signer</b> : en dessous de 25 % du coût de l'opération, pas de PTZ.</li>
+      <li><b>4. Adressez votre demande</b> à une banque conventionnée. L'agence départementale d'information sur le logement (Adil) peut vous renseigner.</li>
+    </ul>
+    <h2 style="margin-top:18px">Points de vigilance</h2>
+    <ul>
+      <li>Quand le différé prend fin, les mensualités du PTZ s'ajoutent à celles du prêt principal : prévoyez cette hausse dès le départ. Notre guide sur la <a href="/guide-capacite-emprunt">capacité d'emprunt</a> explique la règle des 35 %.</li>
+      <li>Le logement doit rester votre résidence principale pendant six ans à compter du versement du prêt. Il ne peut servir ni de résidence secondaire, ni de location meublée ou saisonnière.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="partner">
+    <div>
+      <p class="eyebrow" style="color:var(--bg);opacity:.75">Service gratuit</p>
+      <h2 style="margin-top:8px">Financer votre achat, avec ou sans PTZ</h2>
+      <p>Un courtier partenaire compare les offres de plusieurs banques à partir de votre situation et vous rappelle sous 48 h ouvrées.</p>
+      <ul>
+        <li>Le taux et l'assurance du prêt principal pèsent sur le coût total de votre achat.</li>
+      </ul>
+    </div>
+    <div class="ctas">
+      <a class="btn" href="/#partenaire" data-partner="credit" rel="sponsored noopener">Comparer les taux de crédit</a>
+      <a class="btn ghost" href="/#partenaire" data-partner="assurance" rel="sponsored noopener">Réduire mon assurance de prêt</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Sources</p>
+    <h2>Sources consultées le 9 octobre 2026</h2>
+    <ul>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34966/1" rel="noopener">Service-public.gouv.fr : Prêt à taux zéro, achat d'un logement ancien</a> (fiche vérifiée le 15 septembre 2026)</li>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34966/2_0" rel="noopener">Service-public.gouv.fr : Prêt à taux zéro, achat d'un logement neuf</a> (fiche vérifiée le 15 septembre 2026)</li>
+      <li><a href="https://www.economie.gouv.fr/particuliers/emprunter-et-sassurer/pret-taux-zero-ptz-tout-ce-quil-faut-savoir" rel="noopener">Economie.gouv.fr : Prêt à taux zéro, tout ce qu'il faut savoir</a></li>
+      <li><a href="https://www.anil.org/pret-taux-zero/" rel="noopener">Anil : Prêt à taux zéro pour l'achat ou la construction d'un logement</a></li>
+      <li><a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074096/LEGISCTA000023361876/" rel="noopener">Légifrance : Code de la construction et de l'habitation, articles D31-10-8 à D31-10-10</a> (version en vigueur au 9 octobre 2026)</li>
+      <li><a href="https://www.ecologie.gouv.fr/politiques-publiques/zonage-b-c" rel="noopener">Ministère chargé du logement : Zonage A, B, C</a> (page mise à jour le 3 juillet 2026)</li>
+      <li><a href="https://www.data.gouv.fr/datasets/liste-des-communes-selon-le-zonage-abc" rel="noopener">Data.gouv.fr : Liste des communes selon le zonage ABC, en vigueur depuis le 26 juin 2026</a></li>
+      <li><a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054306084" rel="noopener">Légifrance : arrêté du 23 juin 2026 modifiant le classement des communes par zone</a></li>
+      <li><a href="https://www.prefectures-regions.gouv.fr/hauts-de-france/Actualites/Adaptation-a-l-evolution-des-besoins-en-logements-sur-les-territoires" rel="noopener">Préfecture de la région Hauts-de-France : communes reclassées par l'arrêté du 5 septembre 2025</a></li>
+      <li><a href="https://www.meilleurtaux.com/credit-immobilier/barometre-des-taux.html" rel="noopener">Meilleurtaux : baromètre des taux de crédit immobilier, octobre 2026</a></li>
+      <li><a href="https://www.cafpi.fr/credit-immobilier/barometre-taux" rel="noopener">CAFPI : baromètre des taux de crédit immobilier</a> (taux constatés le 1<sup>er</sup> octobre 2026)</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>
+    <h3>Brique &amp; Clé</h3>
+    <p>Outils gratuits pour préparer un achat immobilier dans les Hauts-de-France.</p>
+    <p class="warn">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+    <p style="margin-top:12px">Liens partenaires : certains liens de ce site sont rémunérés. Brique &amp; Clé n'est ni une banque ni un courtier et ne donne pas de conseil en crédit.</p>
+  </div>
+  <div>
+    <h3>Mentions légales</h3>
+    <p>Éditeur : Sonia ALVES LOPES, entrepreneur individuel (ALS Nova Gestion)<br>2B rue Notre Dame de Tongre, 62580 Arleux-en-Gohelle<br>SIREN 109 176 784<br>TVA non applicable, art. 293 B du CGI</p>
+  </div>
+</footer>
+</div>
+<script>
+const PARTNER_LINKS = { credit: "", rachat: "", assurance: "" };
+document.querySelectorAll("[data-partner]").forEach(a => { const u = PARTNER_LINKS[a.dataset.partner]; if (u) { a.href = u; a.target = "_blank"; } });
+</script>
+</body>
+</html>
