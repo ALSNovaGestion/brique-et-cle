@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frais de notaire d'un premier achat dans le Nord et le Pas-de-Calais | Brique &amp; Clé</title>
+<meta name="description" content="Frais de notaire en octobre 2026 : 6,32 % ou 5,81 % de droits de mutation dans le 59 et le 62, conditions du taux primo-accédant, achat à deux et exemple chiffré.">
+<link rel="canonical" href="https://brique-et-cle.netlify.app/guide-frais-de-notaire-primo-accedant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface-2:#F5F7F9; --ink:#1C2127; --ink-2:#4B5663; --line:#D5DBE2;
+  --brick:#A8432A; --brick-ink:#FFFFFF; --brick-soft:#F4E3DD; --slate:#3E4C5B; --mortar:#E3E7EC;
+  --ok:#2F7A4F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+    --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+  --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo svg{flex:none}
+nav.main{display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav.main a:hover{color:var(--brick)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding-block:40px 64px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:34rem;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--ink-2)}
+.fact b{color:var(--ink)}
+.bond{height:14px;margin-top:36px;max-width:34rem;border-radius:2px;
+  background:
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 0 0/100% 6px no-repeat,
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 21px 8px/100% 6px no-repeat;opacity:.85}
+
+/* calculator card */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 40px -24px rgba(20,30,40,.35)}
+.calc h2{font-size:1.4rem}
+.calc .sub{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--ink-2)}
+input[type=number],select{font:inherit;font-variant-numeric:tabular-nums;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);width:100%}
+input[type=number]:focus,select:focus{border-color:var(--brick);outline:none;box-shadow:0 0 0 3px var(--brick-soft)}
+.check{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink)}
+.check input{width:18px;height:18px;accent-color:var(--brick)}
+.result{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result .big{grid-column:1/-1;background:var(--brick-soft);border-radius:10px;padding:14px 16px}
+.result .k{font-size:.8rem;color:var(--ink-2);font-weight:600}
+.result .v{font-family:var(--display);font-weight:700;font-size:1.35rem}
+.result .big .v{font-size:2rem;color:var(--brick)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brick);color:var(--brick-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 20px;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.wide{width:100%;margin-top:18px}
+.btn.ghost{background:transparent;color:var(--brick);border:2px solid var(--brick)}
+.fine{font-size:.78rem;color:var(--ink-2);margin-top:10px}
+
+/* sections */
+section.block{padding-block:64px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;max-width:44rem;margin-bottom:32px}
+.head p{color:var(--ink-2)}
+.notaire{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.breakdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;padding-block:10px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row span:first-child{color:var(--ink-2)}
+.row.total{border-bottom:0;font-weight:700;font-size:1.1rem;padding-top:14px}
+.row.total span:first-child{color:var(--ink)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:14px;background:var(--mortar)}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--brick)}
+.step p{color:var(--ink-2);font-size:.93rem}
+
+.partner{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--slate);color:var(--bg);border-radius:18px;padding:36px}
+.partner h2{color:var(--bg)}
+.partner p{opacity:.88;margin-top:10px}
+.partner ul{margin:14px 0 0;padding-left:20px;opacity:.92}
+.partner .ctas{display:flex;flex-direction:column;gap:12px}
+.partner .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+.villes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ville{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.ville:hover{border-color:var(--brick)}
+.ville b{font-family:var(--display);font-size:1.05rem}
+.ville small{color:var(--ink-2)}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--ink-2);max-width:65ch}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-2);display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.warn{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:8px;padding:14px 16px;color:var(--ink);font-weight:600;margin-top:14px}
+
+@media (max-width:900px){
+  .hero,.notaire,.partner,footer{grid-template-columns:1fr}
+  .steps,.villes{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .grid2,.result,.steps,.villes{grid-template-columns:1fr}
+  .calc{padding:20px}
+  .partner{padding:24px}
+  nav.main{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+.crumbs{font-size:.88rem;color:var(--ink-2);padding-top:8px}
+.crumbs a{color:var(--ink-2)}
+.cityhero{padding-block:32px 40px;max-width:46rem}
+.cityhero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.price .k{font-size:.82rem;color:var(--ink-2);font-weight:600}
+.price .v{font-family:var(--display);font-weight:700;font-size:1.7rem;margin-top:4px}
+.price small{color:var(--ink-2);font-size:.8rem}
+.prose{max-width:65ch;display:flex;flex-direction:column;gap:14px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.src{font-size:.8rem;color:var(--ink-2);margin-top:14px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+@media (max-width:520px){.prices{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="/" aria-label="Brique &amp; Clé, accueil">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="2" y="15" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="15" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <rect x="2" y="24" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <circle cx="25" cy="27.5" r="3.2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M28 27.5h4" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Brique &amp; Clé
+  </a>
+  <nav class="main" aria-label="Navigation principale">
+    <a href="/#capacite">Capacité d'emprunt</a>
+    <a href="/#notaire">Frais de notaire</a>
+    <a href="/#villes">Villes</a>
+    <a href="/#faq">Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumbs"><a href="/">Accueil</a> › <a href="/#guides">Guides pratiques</a> › Frais de notaire d'un premier achat</p>
+<section class="cityhero">
+  <p class="eyebrow">Guide pratique</p>
+  <h1>Frais de notaire : ce que paie un premier achat dans le Nord et le Pas-de-Calais</h1>
+  <p class="lede">Depuis le 1<sup>er</sup> mai 2025, acheter un logement ancien coûte plus cher en frais de notaire dans le Nord et le Pas-de-Calais. Les primo-accédants échappent à cette hausse. Voici qui en profite, ce que cela change en euros et les points à vérifier avant de signer, d'après les règles en vigueur en octobre 2026.</p>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Le principe</p>
+    <h2>Ce que contiennent vraiment les « frais de notaire »</h2>
+    <p>Le terme est trompeur. La plus grande partie de la somme versée au notaire est reversée à l'État et aux collectivités. Les frais d'acquisition se composent de quatre éléments :</p>
+    <ul>
+      <li><b>Les droits de mutation</b>, appelés aussi droits d'enregistrement ou taxe de publicité foncière. C'est de loin le poste le plus lourd. Ils sont calculés sur le prix et vont au département, à la commune et à l'État.</li>
+      <li><b>Les émoluments du notaire</b>, sa rémunération pour l'acte de vente. Leur barème est fixé par l'État et identique chez tous les notaires : 3,870 % jusqu'à 6&#8239;500 €, 1,596 % de 6&#8239;500 à 17&#8239;000 €, 1,064 % de 17&#8239;000 à 60&#8239;000 €, puis 0,799 % au-delà. La TVA de 20 % s'y ajoute.</li>
+      <li><b>Les débours et formalités</b> : sommes que le notaire avance pour obtenir les documents nécessaires à la vente (cadastre, syndic, état civil, etc.).</li>
+      <li><b>La contribution de sécurité immobilière</b> : 0,10 % du prix, 15 € au minimum.</li>
+    </ul>
+    <p>Notaires de France estime l'ensemble à 7 à 8 % du prix dans l'ancien et à 2 à 3 % dans le neuf.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Dans le 59 et le 62</p>
+    <h2>6,32 % pour la plupart des acheteurs, 5,81 % pour un premier achat</h2>
+    <p>La loi de finances pour 2025 permet aux départements de relever leur taux de droits de mutation de 4,50 % à 5 % au plus. Le Nord et le Pas-de-Calais l'ont fait pour les actes signés depuis le 1<sup>er</sup> mai 2025 : le tableau officiel de la DGFiP des taux applicables au 1<sup>er</sup> juin 2026, le plus récent publié, leur attribue 5,00 %.</p>
+    <p>À ce taux départemental s'ajoutent la taxe communale de 1,20 % et un prélèvement de l'État de 2,37 %, calculé sur la part du département. Le total donne :</p>
+    <ul>
+      <li><b>6,3185 % du prix</b> pour un achat dans l'ancien au taux relevé (5 % + 1,20 % + 0,1185 %) ;</li>
+      <li><b>5,80665 % du prix</b> quand l'acheteur est primo-accédant : la hausse ne s'applique pas et le taux départemental reste à 4,50 %.</li>
+    </ul>
+    <p>Ce régime est temporaire. Il vaut pour les actes signés du 1<sup>er</sup> avril 2025 au 31 mars 2028. À partir du 1<sup>er</sup> avril 2028, la loi prévoit le retour au taux départemental en vigueur le 31 janvier 2025, soit 4,50 % dans les deux départements.</p>
+    <p>Bon à savoir : c'est la date de signature de l'acte authentique chez le notaire qui compte, pas celle du compromis.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les conditions</p>
+    <h2>Qui est considéré comme primo-accédant ?</h2>
+    <p>Deux conditions suffisent. Aucune condition de revenus ni de mode de financement n'est exigée :</p>
+    <ul>
+      <li><b>Ne pas avoir été propriétaire de votre résidence principale</b> au cours des deux années qui précèdent l'achat.</li>
+      <li><b>Acheter le logement pour en faire votre résidence principale</b>, c'est-à-dire l'habiter de façon habituelle, au moins huit mois par an.</li>
+    </ul>
+    <p>L'administration fiscale a précisé plusieurs situations courantes :</p>
+    <ul>
+      <li>Vous avez vendu votre résidence principale il y a plus de deux ans et vous êtes locataire depuis : vous êtes primo-accédant.</li>
+      <li>Vous êtes locataire mais propriétaire d'une résidence secondaire : vous êtes primo-accédant, car seule compte la résidence principale.</li>
+      <li>Vous étiez seulement usufruitier ou nu-propriétaire de votre résidence principale : vous êtes primo-accédant pour l'achat de la pleine propriété.</li>
+      <li>La condition des deux ans n'est pas exigée si l'acheteur ou un occupant du logement est titulaire de la carte mobilité inclusion mention invalidité, perçoit certaines pensions d'invalidité, l'AAH ou l'AEEH, ou a perdu définitivement sa résidence principale à la suite d'une catastrophe.</li>
+    </ul>
+    <h2 style="margin-top:18px">L'achat à deux : attention au statut du couple</h2>
+    <ul>
+      <li><b>En indivision</b> (concubins, partenaires de Pacs, époux séparés de biens), chaque acheteur est examiné séparément. Le taux réduit s'applique à la quote-part de celui qui est primo-accédant, le taux plein à celle de l'autre.</li>
+      <li><b>Époux mariés sous la communauté</b> : les deux doivent être primo-accédants pour profiter du taux réduit, sauf si un seul des époux achète avec ses fonds propres et le déclare dans l'acte.</li>
+      <li>En cas de divorce, l'époux qui détenait le logement familial en indivision avec son conjoint n'est pas primo-accédant s'il achète dans les deux ans qui suivent son départ de ce logement.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="sim">
+    <div class="prose">
+      <p class="eyebrow">Exemple chiffré</p>
+      <h2>Une maison ancienne à 150&#8239;000 €</h2>
+      <p>Prenons une maison ancienne vendue 150&#8239;000 € dans le Nord ou le Pas-de-Calais. Les émoluments, les débours et la contribution de sécurité immobilière sont les mêmes pour tous les acheteurs. Seuls les droits de mutation changent.</p>
+      <p>Un primo-accédant paie environ <b class="num">11&#8239;975 €</b> de frais, soit 8,0 % du prix. Un acheteur qui a déjà été propriétaire de sa résidence principale ces deux dernières années paie environ <b class="num">12&#8239;743 €</b>, soit 8,5 %. L'écart atteint 768 €.</p>
+      <p>Un couple pacsé qui achète en indivision à parts égales, dont un seul membre est primo-accédant, paierait environ 12&#8239;359 € : la moitié du prix au taux réduit, l'autre au taux plein.</p>
+      <p>Pour comparaison, un logement neuf vendu par un promoteur au même prix coûterait environ 4&#8239;340 € de frais, soit 2,9 %. Dans le neuf, le taux réduit de 0,715 % s'applique à tous, primo-accédants ou non.</p>
+      <a class="btn" href="/#notaire" style="align-self:flex-start">Calculer mes frais de notaire</a>
+    </div>
+    <div class="breakdown">
+      <div class="row"><span>Prix de la maison ancienne</span><span class="num">150&#8239;000 €</span></div>
+      <div class="row"><span>Droits de mutation, primo-accédant (5,80665 %)</span><span class="num">8&#8239;710 €</span></div>
+      <div class="row"><span>Émoluments du notaire (TTC)</span><span class="num">1&#8239;915 €</span></div>
+      <div class="row"><span>Débours et formalités (estimés)</span><span class="num">1&#8239;200 €</span></div>
+      <div class="row"><span>Contribution de sécurité immobilière</span><span class="num">150 €</span></div>
+      <div class="row total"><span>Frais pour un primo-accédant</span><span class="num">11&#8239;975 €</span></div>
+      <div class="row"><span>Droits de mutation au taux plein (6,3185 %)</span><span class="num">9&#8239;478 €</span></div>
+      <div class="row total"><span>Frais pour un autre acheteur</span><span class="num">12&#8239;743 €</span></div>
+      <p class="fine">Calcul indicatif fait avec les taux en vigueur le 14 octobre 2026. Les débours varient d'un dossier à l'autre : 1&#8239;200 € est une estimation. Seul votre notaire peut fixer le montant exact.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Mode d'emploi</p>
+    <h2>Les bons réflexes avant de signer</h2>
+    <ul>
+      <li><b>1. Signalez votre situation au notaire dès le compromis.</b> C'est lui qui applique le taux. En cas de doute (vente de votre logement il y a un peu moins de deux ans, achat à deux, régime matrimonial), posez la question avant la signature.</li>
+      <li><b>2. Demandez un devis écrit détaillé</b> ou un état prévisionnel du coût. Après la vente, le notaire doit vous remettre un document détaillant les frais.</li>
+      <li><b>3. Interrogez le notaire sur les remises.</b> Pour les ventes d'un montant élevé, la réglementation l'autorise à consentir une remise sur ses émoluments. Son taux doit être le même pour tous ses clients.</li>
+      <li><b>4. Intégrez les frais à votre budget.</b> Ils s'ajoutent au prix et se règlent à la signature de l'acte. Notre <a href="/#notaire">simulateur de frais de notaire</a> et notre guide sur la <a href="/guide-capacite-emprunt">capacité d'emprunt</a> vous aident à chiffrer le tout.</li>
+    </ul>
+    <h2 style="margin-top:18px">Points de vigilance</h2>
+    <ul>
+      <li>Le statut de primo-accédant pour les frais de notaire ne se confond pas avec les conditions du <a href="/guide-ptz">prêt à taux zéro</a>, qui ajoute des plafonds de revenus et des règles selon la commune.</li>
+      <li>Si vous achetez pour louer ou pour une résidence secondaire, le taux réduit ne s'applique pas, même pour un premier achat.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="partner">
+    <div>
+      <p class="eyebrow" style="color:var(--bg);opacity:.75">Service gratuit</p>
+      <h2 style="margin-top:8px">Financer votre premier achat</h2>
+      <p>Un courtier partenaire compare les offres de plusieurs banques à partir de votre situation et vous rappelle sous 48 h ouvrées.</p>
+      <ul>
+        <li>Les frais de notaire, le taux et l'assurance du prêt pèsent ensemble sur le coût de votre achat.</li>
+      </ul>
+    </div>
+    <div class="ctas">
+      <a class="btn" href="/#partenaire" data-partner="credit" rel="sponsored noopener">Comparer les taux de crédit</a>
+      <a class="btn ghost" href="/#partenaire" data-partner="assurance" rel="sponsored noopener">Réduire mon assurance de prêt</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Sources</p>
+    <h2>Sources consultées le 14 octobre 2026</h2>
+    <ul>
+      <li><a href="https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000051173383" rel="noopener">Légifrance : article 116 de la loi de finances pour 2025</a> (version en vigueur depuis le 21 février 2026)</li>
+      <li><a href="https://bofip.impots.gouv.fr/bofip/3311-PGP.html/identifiant%3DBOI-ENR-DMTOI-10-20-20260617" rel="noopener">BOFiP : BOI-ENR-DMTOI-10-20, régime de droit commun et primo-accédants</a> (publié le 17 juin 2026)</li>
+      <li><a href="https://www.impots.gouv.fr/sites/default/files/media/1_metier/3_partenaire/notaires/dmto/dmto_2026-06.pdf" rel="noopener">Impots.gouv.fr : taux des droits d'enregistrement par département au 1<sup>er</sup> juin 2026</a></li>
+      <li><a href="https://www.legifiscal.fr/actualites-fiscales/4130-hausse-frais-notaires-45-nouveaux-departements-1er-mai.html" rel="noopener">Légifiscal : départements passés à 5 % au 1<sup>er</sup> mai 2025, dont le Nord et le Pas-de-Calais</a></li>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F17701" rel="noopener">Service-public.gouv.fr : Frais de notaire, de quoi s'agit-il ?</a> (fiche vérifiée le 5 août 2026)</li>
+      <li><a href="https://www.notaires.fr/fr/immobilier-fiscalite/financement/les-frais-dacquisition" rel="noopener">Notaires de France : frais d'acquisition</a> (page mise à jour le 11 février 2026)</li>
+      <li><a href="https://www.notaires.fr/fr/immobilier-fiscalite/financement/acquerir-en-frais-de-notaire-reduits" rel="noopener">Notaires de France : frais réduits dans le neuf</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>
+    <h3>Brique &amp; Clé</h3>
+    <p>Outils gratuits pour préparer un achat immobilier dans les Hauts-de-France.</p>
+    <p class="warn">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+    <p style="margin-top:12px">Liens partenaires : certains liens de ce site sont rémunérés. Brique &amp; Clé n'est ni une banque ni un courtier et ne donne pas de conseil en crédit.</p>
+  </div>
+  <div>
+    <h3>Mentions légales</h3>
+    <p>Éditeur : Sonia ALVES LOPES, entrepreneur individuel (ALS Nova Gestion)<br>2B rue Notre Dame de Tongre, 62580 Arleux-en-Gohelle<br>SIREN 109 176 784<br>TVA non applicable, art. 293 B du CGI</p>
+  </div>
+</footer>
+</div>
+<script>
+const PARTNER_LINKS = { credit: "", rachat: "", assurance: "" };
+document.querySelectorAll("[data-partner]").forEach(a => { const u = PARTNER_LINKS[a.dataset.partner]; if (u) { a.href = u; a.target = "_blank"; } });
+</script>
+</body>
+</html>
