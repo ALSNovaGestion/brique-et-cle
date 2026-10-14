@@ -35,6 +35,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-10-07 → /dunkerque — Dunkerque (59140)
 - [x] 2026-10-09 → /guide-ptz — Prêt à taux zéro : conditions et montants pour acheter dans le Nord et le Pas-de-Calais
 - [x] 2026-10-12 → /bruay-la-buissiere — Bruay-la-Buissière (62700)
+- [x] 2026-10-14 → /guide-frais-de-notaire-primo-accedant — Frais de notaire : ce que paie un premier achat dans le 59 et le 62
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville (cartes de prix, ligne « Source », exemple chiffré, mois de la balise meta description) et date lastmod de la page dans sitemap.xml, source meilleursagents.com/prix-immobilier/<ville>-<cp>/ — contrôlés le 2026-10-02 : les 10 pages ville affichent les estimations MeilleursAgents au 1er octobre 2026
