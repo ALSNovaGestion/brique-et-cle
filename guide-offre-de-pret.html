@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Offre de prêt immobilier : délais, délai de réflexion et pièges | Brique &amp; Clé</title>
+<meta name="description" content="Offre de prêt immobilier en octobre 2026 : contenu obligatoire, 30 jours de validité, 10 jours de réflexion, 4 mois pour signer la vente, assurance et pièges à éviter.">
+<link rel="canonical" href="https://brique-et-cle.netlify.app/guide-offre-de-pret">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface-2:#F5F7F9; --ink:#1C2127; --ink-2:#4B5663; --line:#D5DBE2;
+  --brick:#A8432A; --brick-ink:#FFFFFF; --brick-soft:#F4E3DD; --slate:#3E4C5B; --mortar:#E3E7EC;
+  --ok:#2F7A4F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+    --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+  --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo svg{flex:none}
+nav.main{display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav.main a:hover{color:var(--brick)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding-block:40px 64px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:34rem;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--ink-2)}
+.fact b{color:var(--ink)}
+.bond{height:14px;margin-top:36px;max-width:34rem;border-radius:2px;
+  background:
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 0 0/100% 6px no-repeat,
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 21px 8px/100% 6px no-repeat;opacity:.85}
+
+/* calculator card */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 40px -24px rgba(20,30,40,.35)}
+.calc h2{font-size:1.4rem}
+.calc .sub{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--ink-2)}
+input[type=number],select{font:inherit;font-variant-numeric:tabular-nums;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);width:100%}
+input[type=number]:focus,select:focus{border-color:var(--brick);outline:none;box-shadow:0 0 0 3px var(--brick-soft)}
+.check{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink)}
+.check input{width:18px;height:18px;accent-color:var(--brick)}
+.result{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result .big{grid-column:1/-1;background:var(--brick-soft);border-radius:10px;padding:14px 16px}
+.result .k{font-size:.8rem;color:var(--ink-2);font-weight:600}
+.result .v{font-family:var(--display);font-weight:700;font-size:1.35rem}
+.result .big .v{font-size:2rem;color:var(--brick)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brick);color:var(--brick-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 20px;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.wide{width:100%;margin-top:18px}
+.btn.ghost{background:transparent;color:var(--brick);border:2px solid var(--brick)}
+.fine{font-size:.78rem;color:var(--ink-2);margin-top:10px}
+
+/* sections */
+section.block{padding-block:64px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;max-width:44rem;margin-bottom:32px}
+.head p{color:var(--ink-2)}
+.notaire{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.breakdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;padding-block:10px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row span:first-child{color:var(--ink-2)}
+.row.total{border-bottom:0;font-weight:700;font-size:1.1rem;padding-top:14px}
+.row.total span:first-child{color:var(--ink)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:14px;background:var(--mortar)}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--brick)}
+.step p{color:var(--ink-2);font-size:.93rem}
+
+.partner{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--slate);color:var(--bg);border-radius:18px;padding:36px}
+.partner h2{color:var(--bg)}
+.partner p{opacity:.88;margin-top:10px}
+.partner ul{margin:14px 0 0;padding-left:20px;opacity:.92}
+.partner .ctas{display:flex;flex-direction:column;gap:12px}
+.partner .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+.villes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ville{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.ville:hover{border-color:var(--brick)}
+.ville b{font-family:var(--display);font-size:1.05rem}
+.ville small{color:var(--ink-2)}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--ink-2);max-width:65ch}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-2);display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.warn{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:8px;padding:14px 16px;color:var(--ink);font-weight:600;margin-top:14px}
+
+@media (max-width:900px){
+  .hero,.notaire,.partner,footer{grid-template-columns:1fr}
+  .steps,.villes{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .grid2,.result,.steps,.villes{grid-template-columns:1fr}
+  .calc{padding:20px}
+  .partner{padding:24px}
+  nav.main{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+.crumbs{font-size:.88rem;color:var(--ink-2);padding-top:8px}
+.crumbs a{color:var(--ink-2)}
+.cityhero{padding-block:32px 40px;max-width:46rem}
+.cityhero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.price .k{font-size:.82rem;color:var(--ink-2);font-weight:600}
+.price .v{font-family:var(--display);font-weight:700;font-size:1.7rem;margin-top:4px}
+.price small{color:var(--ink-2);font-size:.8rem}
+.prose{max-width:65ch;display:flex;flex-direction:column;gap:14px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.src{font-size:.8rem;color:var(--ink-2);margin-top:14px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+@media (max-width:520px){.prices{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="/" aria-label="Brique &amp; Clé, accueil">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="2" y="15" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="15" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <rect x="2" y="24" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <circle cx="25" cy="27.5" r="3.2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M28 27.5h4" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Brique &amp; Clé
+  </a>
+  <nav class="main" aria-label="Navigation principale">
+    <a href="/#capacite">Capacité d'emprunt</a>
+    <a href="/#notaire">Frais de notaire</a>
+    <a href="/#villes">Villes</a>
+    <a href="/#faq">Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumbs"><a href="/">Accueil</a> › <a href="/#guides">Guides pratiques</a> › Offre de prêt immobilier</p>
+<section class="cityhero">
+  <p class="eyebrow">Guide pratique</p>
+  <h1>Offre de prêt immobilier : délais, délai de réflexion et pièges à éviter</h1>
+  <p class="lede">L'offre de prêt est le document qui engage la banque. Entre sa réception et la signature chez le notaire, la loi impose un calendrier précis : 30 jours de validité, 10 jours de réflexion, 4 mois pour signer la vente. Voici comment il fonctionne et les erreurs qui peuvent retarder ou fragiliser votre achat, d'après les textes en vigueur en octobre 2026.</p>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Le document</p>
+    <h2>Ce que doit contenir l'offre de prêt</h2>
+    <p>Quand la banque accepte votre dossier, elle vous adresse une offre écrite, gratuite, sur papier ou sur un autre support durable. Elle l'envoie aussi à vos cautions éventuelles, si ce sont des personnes physiques. Un accord de principe ou un simple courrier ne suffit pas : seule cette offre engage le prêteur.</p>
+    <p>Le Code de la consommation fixe son contenu minimal. L'offre doit notamment indiquer :</p>
+    <ul>
+      <li>l'identité des parties, la nature et l'objet du prêt, et la date de mise à disposition des fonds ;</li>
+      <li>le montant emprunté, son coût total et le <b>taux annuel effectif global (TAEG)</b>, qui intègre les intérêts, les frais de dossier, l'assurance exigée et le coût de la garantie ;</li>
+      <li>pour un taux fixe, l'échéancier détaillant la part de capital et d'intérêts de chaque mensualité ; pour un taux variable, une notice et une simulation de l'effet d'une variation du taux ;</li>
+      <li>les assurances et garanties exigées, avec une évaluation de leur coût ;</li>
+      <li>la mention que vous pouvez choisir un autre assureur que celui de la banque ;</li>
+      <li>le rappel du délai de réflexion.</li>
+    </ul>
+    <p>L'offre est accompagnée de la fiche d'information standardisée européenne (FISE) quand ses caractéristiques diffèrent de la fiche remise plus tôt. Cette fiche, au format imposé, permet de comparer les propositions de plusieurs banques.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les délais légaux</p>
+    <h2>30 jours, 10 jours, 4 mois : trois délais à connaître</h2>
+    <ul>
+      <li><b>30 jours de validité au minimum.</b> La banque doit maintenir les conditions de son offre pendant au moins 30 jours à compter de sa réception, même si les taux du marché montent entre-temps.</li>
+      <li><b>10 jours de réflexion, sans exception.</b> Vous ne pouvez pas accepter l'offre avant dix jours après sa réception. Le délai se compte en jours calendaires, week-ends et jours fériés compris, à partir du lendemain de la réception. Il ne peut pas être raccourci, même si vous êtes pressé. L'acceptation se fait par lettre, le cachet de la poste faisant foi, ou par un autre moyen convenu avec la banque qui donne une date certaine.</li>
+      <li><b>4 mois pour signer la vente.</b> L'offre est acceptée sous une condition : la vente doit être conclue dans les quatre mois qui suivent l'acceptation. Sinon, le prêt tombe. Vous rembourseriez alors les sommes éventuellement versées, et la banque pourrait seulement retenir des frais d'étude, plafonnés par décret et indiqués dans l'offre. La banque et vous pouvez convenir d'un délai plus long.</li>
+    </ul>
+    <p>Jusqu'à votre acceptation, aucun versement ne peut avoir lieu entre la banque et vous au titre de ce prêt. Les fonds sont en général débloqués le jour de la signature de l'acte chez le notaire.</p>
+    <p>Si vous financez l'achat avec plusieurs prêts et que vous l'avez signalé à chaque banque, chaque prêt de plus de 10 % du crédit total est conclu sous la condition que les autres soient accordés.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="sim">
+    <div class="prose">
+      <p class="eyebrow">Exemple chiffré</p>
+      <h2>Le calendrier d'un achat signé début novembre</h2>
+      <p>Vous signez un compromis le lundi 2 novembre 2026, avec une condition suspensive d'obtention de prêt de 45 jours, soit jusqu'au jeudi 17 décembre 2026. Service-public.gouv.fr indique que ce délai est en général de 45 à 60 jours. La loi interdit qu'il soit inférieur à un mois.</p>
+      <p>La banque vous envoie l'offre, que vous recevez le mardi 1<sup>er</sup> décembre. La condition suspensive est remplie dès qu'une offre ferme et conforme au compromis vous est présentée : prévenez le notaire et le vendeur.</p>
+      <p>Vous pouvez accepter l'offre <b>à partir du samedi 12 décembre</b>. Si vous l'acceptez ce jour-là, l'acte de vente doit être signé <b>au plus tard le lundi 12 avril 2027</b>, sauf délai plus long prévu avec la banque.</p>
+      <p>Côté coût, le TAEG de l'offre ne peut pas dépasser le taux d'usure. Pour un prêt à taux fixe de 20 ans ou plus accordé au 4<sup>e</sup> trimestre 2026, la Banque de France le fixe à <b class="num">5,40 %</b> (4,68 % de 10 à moins de 20 ans).</p>
+    </div>
+    <div class="breakdown">
+      <div class="row"><span>Signature du compromis</span><span class="num">lun. 2 nov. 2026</span></div>
+      <div class="row"><span>Réception de l'offre</span><span class="num">mar. 1<sup>er</sup> déc. 2026</span></div>
+      <div class="row"><span>Délai minimal légal de la condition de prêt</span><span class="num">mer. 2 déc. 2026</span></div>
+      <div class="row"><span>Dernier jour du délai de réflexion</span><span class="num">ven. 11 déc. 2026</span></div>
+      <div class="row total"><span>Acceptation possible à partir du</span><span class="num">sam. 12 déc. 2026</span></div>
+      <div class="row"><span>Fin de la condition de prêt (45 jours)</span><span class="num">jeu. 17 déc. 2026</span></div>
+      <div class="row"><span>Conditions garanties par la banque jusqu'au</span><span class="num">jeu. 31 déc. 2026</span></div>
+      <div class="row total"><span>Vente à signer au plus tard le</span><span class="num">lun. 12 avr. 2027</span></div>
+      <p class="fine">Dates calculées le 19 octobre 2026 selon les articles L313-34, L313-36 et L313-41 du Code de la consommation, pour une offre acceptée le premier jour possible. Le compromis peut prévoir d'autres délais : seuls ceux de votre contrat et de votre offre font foi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">L'assurance du prêt</p>
+    <h2>Changer d'assureur avant de signer l'offre</h2>
+    <p>Jusqu'à la signature de l'offre, la banque ne peut pas refuser une autre assurance qui présente un niveau de garantie équivalent au contrat qu'elle propose. Un refus doit être écrit et motivé. Si l'offre a déjà été émise, la banque vous répond dans les dix jours ouvrés qui suivent votre demande et vous adresse, s'il y a lieu, une offre modifiée.</p>
+    <p>Deux protections comptent ici. En échange de son accord, la banque ne peut ni modifier le taux ni les conditions du crédit, ni vous facturer de frais supplémentaires. Et l'offre modifiée pour un changement d'assurance ne fait pas repartir le délai de réflexion. Vous pouvez aussi changer d'assurance plus tard, à tout moment : notre guide sur le <a href="/guide-changer-assurance-emprunteur">changement d'assurance de prêt</a> détaille la démarche.</p>
+    <p>À l'inverse, toute autre modification d'un prêt à taux fixe, notamment du montant ou du taux, oblige la banque à émettre une nouvelle offre, avec un nouveau délai de réflexion.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Pièges à éviter</p>
+    <h2>Les erreurs qui retardent ou fragilisent un achat</h2>
+    <ul>
+      <li><b>Une condition suspensive trop serrée.</b> Le compromis fixe le montant, la durée et le taux maximal du prêt recherché. Un taux maximal inférieur aux taux du marché ou un délai trop court vous met en difficulté. Vous devez respecter ces termes dans vos demandes de prêt.</li>
+      <li><b>Confondre accord de principe et offre.</b> Un accord de principe ne remplit pas la condition suspensive. Seule une offre ferme et sans réserve, conforme au compromis, compte.</li>
+      <li><b>Dater l'acceptation trop tôt.</b> Une acceptation avant le onzième jour méconnaît la loi. Notez la date de réception de l'offre et comptez les dix jours complets.</li>
+      <li><b>Oublier le délai de quatre mois.</b> Si la signature chez le notaire risque d'être repoussée (vente en chaîne, travaux, succession), demandez à la banque un délai plus long avant d'accepter.</li>
+      <li><b>Comparer les taux nominaux seulement.</b> Le TAEG intègre l'assurance, les frais et la garantie : c'est lui qui permet de comparer deux offres pour un même montant.</li>
+      <li><b>Laisser filer la négociation de l'assurance.</b> C'est avant la signature de l'offre que vous pouvez faire jouer la concurrence sans changer le taux du crédit.</li>
+    </ul>
+    <p>Pour préparer le budget, voyez aussi nos guides sur la <a href="/guide-capacite-emprunt">capacité d'emprunt</a> et les <a href="/guide-frais-de-notaire-primo-accedant">frais de notaire</a>. En cas de doute sur votre compromis, l'Adil de votre département répond gratuitement.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="partner">
+    <div>
+      <p class="eyebrow" style="color:var(--bg);opacity:.75">Service gratuit</p>
+      <h2 style="margin-top:8px">Obtenir une offre de prêt dans les délais</h2>
+      <p>Un courtier partenaire compare les offres de plusieurs banques à partir de votre situation et vous rappelle sous 48 h ouvrées.</p>
+      <ul>
+        <li>Le taux, l'assurance et les frais se négocient avant la signature de l'offre.</li>
+      </ul>
+    </div>
+    <div class="ctas">
+      <a class="btn" href="/#partenaire" data-partner="credit" rel="sponsored noopener">Comparer les taux de crédit</a>
+      <a class="btn ghost" href="/#partenaire" data-partner="assurance" rel="sponsored noopener">Réduire mon assurance de prêt</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Sources</p>
+    <h2>Sources consultées le 19 octobre 2026</h2>
+    <ul>
+      <li><a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069565/LEGISCTA000032222241/" rel="noopener">Légifrance : Code de la consommation, articles L313-24 à L313-39, formation du contrat de crédit</a> (version en vigueur au 19 octobre 2026)</li>
+      <li><a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069565/LEGISCTA000032222275/" rel="noopener">Légifrance : Code de la consommation, articles L313-40 à L313-45, contrat principal et condition suspensive</a> (version en vigueur au 19 octobre 2026)</li>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F16123" rel="noopener">Service-public.gouv.fr : Je veux obtenir un crédit immobilier</a></li>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F188" rel="noopener">Service-public.gouv.fr : condition suspensive d'obtention d'un prêt immobilier</a> (fiche vérifiée le 24 août 2026)</li>
+      <li><a href="https://www.banque-france.fr/fr/statistiques/taux-et-cours/taux-dusure-2026-q4" rel="noopener">Banque de France : taux d'usure applicables au 1<sup>er</sup> octobre 2026</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>
+    <h3>Brique &amp; Clé</h3>
+    <p>Outils gratuits pour préparer un achat immobilier dans les Hauts-de-France.</p>
+    <p class="warn">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+    <p style="margin-top:12px">Liens partenaires : certains liens de ce site sont rémunérés. Brique &amp; Clé n'est ni une banque ni un courtier et ne donne pas de conseil en crédit.</p>
+  </div>
+  <div>
+    <h3>Mentions légales</h3>
+    <p>Éditeur : Sonia ALVES LOPES, entrepreneur individuel (ALS Nova Gestion)<br>2B rue Notre Dame de Tongre, 62580 Arleux-en-Gohelle<br>SIREN 109 176 784<br>TVA non applicable, art. 293 B du CGI</p>
+  </div>
+</footer>
+</div>
+<script>
+const PARTNER_LINKS = { credit: "", rachat: "", assurance: "" };
+document.querySelectorAll("[data-partner]").forEach(a => { const u = PARTNER_LINKS[a.dataset.partner]; if (u) { a.href = u; a.target = "_blank"; } });
+</script>
+</body>
+</html>
