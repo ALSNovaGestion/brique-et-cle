@@ -5,7 +5,6 @@ Quand il reste moins de 8 sujets à publier, il en ajoute 15 nouveaux (villes du
 Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immobilier, assurance emprunteur, rachat de crédits.
 
 ## À publier
-- [ ] ville : cambrai (59400) — Cambrai
 - [ ] article : guide-dpe-achat — Acheter une passoire thermique : DPE, travaux et location
 - [ ] ville : roubaix (59100) — Roubaix
 - [ ] article : guide-apport-personnel — Acheter sans apport ou avec peu d'apport : ce que regardent les banques
