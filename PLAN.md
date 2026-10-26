@@ -13,6 +13,21 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [ ] ville : maubeuge (59600) — Maubeuge
 - [ ] ville : carvin (62220) — Carvin
 - [ ] ville : armentieres (59280) — Armentières
+- [ ] article : guide-pret-relais — Prêt relais : acheter avant d'avoir vendu
+- [ ] ville : villeneuve-d-ascq (59650) — Villeneuve-d'Ascq
+- [ ] article : guide-caution-hypotheque — Caution ou hypothèque : quelle garantie pour votre prêt immobilier
+- [ ] ville : wattrelos (59150) — Wattrelos
+- [ ] article : guide-remboursement-anticipe — Rembourser son prêt immobilier par anticipation : indemnités et calcul
+- [ ] ville : marcq-en-baroeul (59700) — Marcq-en-Barœul
+- [ ] article : guide-achat-neuf-vefa — Acheter dans le neuf (VEFA) : frais, calendrier et garanties
+- [ ] ville : grande-synthe (59760) — Grande-Synthe
+- [ ] article : guide-diagnostics-immobiliers — Diagnostics immobiliers : la liste à vérifier avant d'acheter
+- [ ] ville : hazebrouck (59190) — Hazebrouck
+- [ ] article : guide-taeg — TAEG, taux nominal, taux d'usure : comparer deux offres de prêt
+- [ ] ville : avion (62210) — Avion
+- [ ] article : guide-courtier-credit — Passer par un courtier en crédit immobilier : rôle, frais et démarche
+- [ ] ville : denain (59220) — Denain
+- [ ] ville : halluin (59250) — Halluin
 
 ## Publiés
 - [x] 2026-09-28 → /arras — Arras (62000)
