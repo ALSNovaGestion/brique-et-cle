@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acheter sans apport ou avec peu d'apport : ce que regardent les banques | Brique &amp; Clé</title>
+<meta name="description" content="Apport personnel : à quoi il sert, ce que la banque examine quand il est faible, exemple chiffré dans le 59 et le 62 et solutions (épargne salariale, Action Logement, PTZ).">
+<link rel="canonical" href="https://brique-et-cle.netlify.app/guide-apport-personnel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F4; --surface:#FFFFFF; --surface-2:#F5F7F9; --ink:#1C2127; --ink-2:#4B5663; --line:#D5DBE2;
+  --brick:#A8432A; --brick-ink:#FFFFFF; --brick-soft:#F4E3DD; --slate:#3E4C5B; --mortar:#E3E7EC;
+  --ok:#2F7A4F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+    --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#14171B; --surface:#1D2228; --surface-2:#232930; --ink:#E7EBEF; --ink-2:#A3AEBA; --line:#323A43;
+  --brick:#E07052; --brick-ink:#1A0E0A; --brick-soft:#3A2520; --slate:#B7C3CF; --mortar:#262C33; --ok:#6CC596;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px}
+.wrap{max-width:1120px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brick)}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);text-decoration:none}
+.logo svg{flex:none}
+nav.main{display:flex;gap:22px;flex-wrap:wrap}
+nav.main a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:.95rem}
+nav.main a:hover{color:var(--brick)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding-block:40px 64px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:34rem;margin-top:18px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--ink-2)}
+.fact b{color:var(--ink)}
+.bond{height:14px;margin-top:36px;max-width:34rem;border-radius:2px;
+  background:
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 0 0/100% 6px no-repeat,
+   repeating-linear-gradient(90deg,var(--brick) 0 38px,var(--bg) 38px 42px) 21px 8px/100% 6px no-repeat;opacity:.85}
+
+/* calculator card */
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 40px -24px rgba(20,30,40,.35)}
+.calc h2{font-size:1.4rem}
+.calc .sub{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:600;color:var(--ink-2)}
+input[type=number],select{font:inherit;font-variant-numeric:tabular-nums;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);width:100%}
+input[type=number]:focus,select:focus{border-color:var(--brick);outline:none;box-shadow:0 0 0 3px var(--brick-soft)}
+.check{display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--ink)}
+.check input{width:18px;height:18px;accent-color:var(--brick)}
+.result{margin-top:22px;border-top:1px dashed var(--line);padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result .big{grid-column:1/-1;background:var(--brick-soft);border-radius:10px;padding:14px 16px}
+.result .k{font-size:.8rem;color:var(--ink-2);font-weight:600}
+.result .v{font-family:var(--display);font-weight:700;font-size:1.35rem}
+.result .big .v{font-size:2rem;color:var(--brick)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brick);color:var(--brick-ink);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 20px;border:0;font:inherit;font-weight:700;cursor:pointer;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn.wide{width:100%;margin-top:18px}
+.btn.ghost{background:transparent;color:var(--brick);border:2px solid var(--brick)}
+.fine{font-size:.78rem;color:var(--ink-2);margin-top:10px}
+
+/* sections */
+section.block{padding-block:64px;border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:10px;max-width:44rem;margin-bottom:32px}
+.head p{color:var(--ink-2)}
+.notaire{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.breakdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.row{display:flex;justify-content:space-between;gap:12px;padding-block:10px;border-bottom:1px solid var(--line);font-size:.95rem}
+.row span:first-child{color:var(--ink-2)}
+.row.total{border-bottom:0;font-weight:700;font-size:1.1rem;padding-top:14px}
+.row.total span:first-child{color:var(--ink)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:14px;background:var(--mortar)}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:.8rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend b{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--brick)}
+.step p{color:var(--ink-2);font-size:.93rem}
+
+.partner{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;background:var(--slate);color:var(--bg);border-radius:18px;padding:36px}
+.partner h2{color:var(--bg)}
+.partner p{opacity:.88;margin-top:10px}
+.partner ul{margin:14px 0 0;padding-left:20px;opacity:.92}
+.partner .ctas{display:flex;flex-direction:column;gap:12px}
+.partner .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+.villes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ville{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:2px}
+.ville:hover{border-color:var(--brick)}
+.ville b{font-family:var(--display);font-size:1.05rem}
+.ville small{color:var(--ink-2)}
+
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+details+details{margin-top:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin-top:10px;color:var(--ink-2);max-width:65ch}
+
+footer{padding-block:48px 64px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink-2);display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+footer h3{font-size:1rem;color:var(--ink);margin-bottom:8px}
+.warn{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--brick);border-radius:8px;padding:14px 16px;color:var(--ink);font-weight:600;margin-top:14px}
+
+@media (max-width:900px){
+  .hero,.notaire,.partner,footer{grid-template-columns:1fr}
+  .steps,.villes{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .grid2,.result,.steps,.villes{grid-template-columns:1fr}
+  .calc{padding:20px}
+  .partner{padding:24px}
+  nav.main{gap:14px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+.crumbs{font-size:.88rem;color:var(--ink-2);padding-top:8px}
+.crumbs a{color:var(--ink-2)}
+.cityhero{padding-block:32px 40px;max-width:46rem}
+.cityhero h1{font-size:clamp(2rem,4.4vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.price .k{font-size:.82rem;color:var(--ink-2);font-weight:600}
+.price .v{font-family:var(--display);font-weight:700;font-size:1.7rem;margin-top:4px}
+.price small{color:var(--ink-2);font-size:.8rem}
+.prose{max-width:65ch;display:flex;flex-direction:column;gap:14px}
+.prose ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.sim{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.src{font-size:.8rem;color:var(--ink-2);margin-top:14px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+@media (max-width:520px){.prices{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="/" aria-label="Brique &amp; Clé, accueil">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+      <rect x="2" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="6" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="2" y="15" width="14" height="7" rx="1" fill="var(--brick)"/>
+      <rect x="18" y="15" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <rect x="2" y="24" width="14" height="7" rx="1" fill="var(--brick)" opacity=".55"/>
+      <circle cx="25" cy="27.5" r="3.2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <path d="M28 27.5h4" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Brique &amp; Clé
+  </a>
+  <nav class="main" aria-label="Navigation principale">
+    <a href="/#capacite">Capacité d'emprunt</a>
+    <a href="/#notaire">Frais de notaire</a>
+    <a href="/#villes">Villes</a>
+    <a href="/#faq">Questions</a>
+  </nav>
+</header>
+
+<main>
+<p class="crumbs"><a href="/">Accueil</a> › <a href="/#guides">Guides pratiques</a> › Acheter avec peu ou pas d'apport</p>
+<section class="cityhero">
+  <p class="eyebrow">Guide pratique</p>
+  <h1>Acheter sans apport ou avec peu d'apport : ce que regardent les banques</h1>
+  <p class="lede">Aucune loi n'impose un apport minimum pour obtenir un crédit immobilier. Mais l'apport change le montant à emprunter, le coût du crédit et la façon dont la banque lit votre dossier. Voici ce qu'il sert à couvrir, d'où il peut venir et ce qu'une banque examine quand il est faible.</p>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les bases</p>
+    <h2>À quoi sert l'apport personnel</h2>
+    <p>L'apport personnel est la part du projet que vous financez sans emprunter auprès de la banque : épargne, livrets, plan d'épargne logement, épargne salariale débloquée ou somme reçue d'un proche. Il n'existe pas de minimum fixé par la loi. Chaque banque applique sa propre politique.</p>
+    <p>En pratique, l'apport sert d'abord à payer les frais qui s'ajoutent au prix : frais de notaire (droits de mutation, émoluments, débours), frais de garantie du prêt et, le cas échéant, frais de dossier. La Finance pour tous, le site d'éducation financière de l'Institut pour l'éducation financière du public, rappelle que ces frais sont en principe couverts par l'apport ou par des prêts aidés plutôt que par le prêt bancaire principal.</p>
+    <p>Les chiffres de l'Autorité de contrôle prudentiel et de résolution (ACPR) montrent pourtant que ce n'est pas une règle absolue. En 2025, le montant prêté représentait en moyenne 79,9&#8239;% de la valeur du bien, et 17,5&#8239;% des crédits dépassaient 100&#8239;% de cette valeur, frais de transaction non compris. Autrement dit, près d'un crédit sur six finançait plus que le prix du logement.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les règles communes</p>
+    <h2>Ce qui ne change pas, avec ou sans apport</h2>
+    <p>Les normes du Haut Conseil de stabilité financière (HCSF) s'appliquent à tous les dossiers, quel que soit l'apport :</p>
+    <ul>
+      <li>un <b>taux d'effort</b> de 35&#8239;% au plus, assurance emprunteur comprise ;</li>
+      <li>une <b>durée</b> de 25 ans au plus, avec une tolérance de 2 ans de différé quand l'entrée dans le logement est décalée ;</li>
+      <li>une <b>marge de flexibilité</b> de 20&#8239;% des crédits accordés chaque trimestre, dont au moins 70&#8239;% réservée à l'achat d'une résidence principale et au moins 30&#8239;% aux primo-accédants.</li>
+    </ul>
+    <p>Un faible apport ne fait donc pas sauter ces plafonds. Il augmente le montant emprunté, donc la mensualité, et rapproche plus vite votre dossier de la limite des 35&#8239;%. Pour estimer cette limite, voyez notre guide <a href="/guide-capacite-emprunt">Capacité d'emprunt et règle des 35&#8239;%</a>.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="sim">
+    <div class="prose">
+      <p class="eyebrow">Exemple chiffré</p>
+      <h2>Un appartement ancien à 120&#8239;000&#8239;€ dans le 59 ou le 62</h2>
+      <p>Prenons un premier achat dans l'ancien à 120&#8239;000&#8239;€. Les frais de notaire, calculés avec le taux réduit des primo-accédants du Nord et du Pas-de-Calais et le barème des émoluments en vigueur, sont d'environ 9&#8239;915&#8239;€. Nous comparons trois apports, avec le même prêt sur 25 ans au taux moyen de 3,6&#8239;% relevé fin octobre 2026 par les baromètres Meilleurtaux et CAFPI, et une assurance estimée à 0,30&#8239;% par an du capital emprunté.</p>
+      <p>Sans apport, il faut emprunter 129&#8239;915&#8239;€. Avec un apport qui couvre les frais de notaire, le prêt tombe à 120&#8239;000&#8239;€. Avec 10&#8239;% du prix en plus, il n'est plus que de 108&#8239;000&#8239;€.</p>
+      <a class="btn" href="/#capacite" style="align-self:flex-start">Calculer avec mes chiffres</a>
+    </div>
+    <div class="breakdown">
+      <div class="row"><span>Sans apport : 129&#8239;915&#8239;€ empruntés</span><span class="num">690&#8239;€/mois</span></div>
+      <div class="row"><span>Revenus nets nécessaires (35&#8239;%)</span><span class="num">1&#8239;971&#8239;€</span></div>
+      <div class="row"><span>Apport de 9&#8239;915&#8239;€ : 120&#8239;000&#8239;€ empruntés</span><span class="num">637&#8239;€/mois</span></div>
+      <div class="row"><span>Revenus nets nécessaires (35&#8239;%)</span><span class="num">1&#8239;821&#8239;€</span></div>
+      <div class="row"><span>Apport de 21&#8239;915&#8239;€ : 108&#8239;000&#8239;€ empruntés</span><span class="num">573&#8239;€/mois</span></div>
+      <div class="row"><span>Revenus nets nécessaires (35&#8239;%)</span><span class="num">1&#8239;639&#8239;€</span></div>
+      <div class="row"><span>Coût du crédit sans apport (intérêts et assurance)</span><span class="num">77&#8239;041&#8239;€</span></div>
+      <div class="row"><span>Coût du crédit avec 9&#8239;915&#8239;€ d'apport</span><span class="num">71&#8239;161&#8239;€</span></div>
+      <div class="row total"><span>Coût du crédit avec 21&#8239;915&#8239;€ d'apport</span><span class="num">64&#8239;045&#8239;€</span></div>
+      <p class="fine">Calcul indicatif : même taux pour les trois cas, mensualité constante, assurance calculée sur le capital initial, frais de garantie non inclus. Sans apport, le taux proposé peut être plus élevé. Seule une banque ou un courtier peut confirmer votre financement.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Le dossier</p>
+    <h2>Ce que la banque regarde quand l'apport est faible</h2>
+    <p>Sans apport, la banque prend plus de risque : si le bien devait être revendu vite, le prix ne couvrirait pas forcément le capital restant dû. Elle compense en examinant le reste du dossier de plus près. La Finance pour tous signale aussi qu'un dossier sans apport peut se voir proposer un taux plus élevé, de l'ordre de 0,40 à 0,60 point selon ses constats.</p>
+    <ul>
+      <li><b>La stabilité des revenus</b> : type de contrat, ancienneté, régularité des revenus des indépendants.</li>
+      <li><b>La gestion des comptes</b> : absence de découvert répété, de rejets de prélèvement ou de crédits à la consommation récents.</li>
+      <li><b>La capacité à épargner</b> : une épargne régulière, même modeste, montre que la future mensualité est supportable. Un loyer actuel proche de cette mensualité joue dans le même sens.</li>
+      <li><b>Le reste à vivre</b> : la somme qui reste chaque mois une fois toutes les charges de crédit payées, surtout pour les revenus modestes et les familles.</li>
+      <li><b>L'épargne de précaution</b> : garder une réserve après l'achat rassure la banque et vous protège en cas d'imprévu. Mieux vaut ne pas placer toute son épargne dans l'apport.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Les solutions</p>
+    <h2>Où trouver un apport ou le compléter</h2>
+    <ul>
+      <li><b>L'épargne salariale</b> : un plan d'épargne entreprise (PEE), un Perco ou un PER d'entreprise collectif peut être débloqué par anticipation pour l'achat de la résidence principale. Pour le PEE et le Perco, la demande doit être faite dans les 6 mois qui suivent l'achat ; pour le PER collectif, à tout moment, mais les sommes issues de versements obligatoires restent bloquées. Le bien doit être acheté en votre nom, pas par une SCI, et les fonds doivent apparaître comme apport personnel dans l'acte.</li>
+      <li><b>Le prêt accession d'Action Logement</b> : réservé aux salariés des entreprises privées non agricoles de 10 salariés et plus, sous conditions de ressources. Il va jusqu'à 30&#8239;000&#8239;€, au taux fixe de 1&#8239;% hors assurance, sur 25 ans au plus. Il concerne l'achat dans le neuf, la construction ou un logement HLM ancien, pour un premier achat ou si vous n'avez pas été propriétaire depuis 10 ans. C'est un prêt complémentaire du prêt principal.</li>
+      <li><b>Le prêt à taux zéro</b> : il réduit le montant du prêt principal pour les primo-accédants sous plafonds de ressources, selon la zone de la commune. Voir notre guide <a href="/guide-ptz">Prêt à taux zéro dans le Nord et le Pas-de-Calais</a>.</li>
+      <li><b>L'aide d'un proche</b> : un don ou un prêt familial peut servir d'apport. Un prêt familial devra être remboursé et la banque le comptera dans vos charges : faites-le écrire et renseignez-vous auprès d'un notaire.</li>
+      <li><b>Réduire les frais</b> : le taux réduit des droits de mutation pour un premier achat, détaillé dans notre guide <a href="/guide-frais-de-notaire-primo-accedant">Frais de notaire d'un premier achat</a>, diminue la somme à apporter.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <div class="partner">
+    <div>
+      <p class="eyebrow" style="color:var(--bg);opacity:.75">Service gratuit</p>
+      <h2 style="margin-top:8px">Faire étudier un dossier avec peu d'apport</h2>
+      <p>Un courtier partenaire présente votre dossier à plusieurs banques, dont certaines acceptent de financer une partie des frais, et compare les offres.</p>
+      <ul>
+        <li>Des crédits en cours pèsent sur votre taux d'effort ? Un regroupement peut libérer de la mensualité avant un achat.</li>
+        <li>L'assurance emprunteur compte dans les 35&#8239;% : une offre moins chère laisse plus de place au capital.</li>
+      </ul>
+    </div>
+    <div class="ctas">
+      <a class="btn" href="/#partenaire" data-partner="credit" rel="sponsored noopener">Comparer les taux de crédit</a>
+      <a class="btn ghost" href="/#partenaire" data-partner="rachat" rel="sponsored noopener">Étudier un rachat de crédits</a>
+      <a class="btn ghost" href="/#partenaire" data-partner="assurance" rel="sponsored noopener">Comparer l'assurance emprunteur</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="prose">
+    <p class="eyebrow">Sources</p>
+    <h2>Sources consultées le 30 octobre 2026</h2>
+    <ul>
+      <li><a href="https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers" rel="noopener">Economie.gouv.fr (HCSF) : Mesure relative à l'octroi de crédits immobiliers</a></li>
+      <li><a href="https://acpr.banque-france.fr/system/files/2026-07/202607_AS183_Financement_habitat_2025.pdf" rel="noopener">ACPR : Le financement de l'habitat en 2025, Analyses et synthèses n° 183, juillet 2026 (PDF)</a></li>
+      <li><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F31622" rel="noopener">Service-public.gouv.fr : Dans quels cas peut-on demander le déblocage anticipé de l'épargne salariale ? (vérifié le 12 octobre 2026)</a></li>
+      <li><a href="https://www.actionlogement.fr/le-pret-accession" rel="noopener">Action Logement : le prêt accession</a></li>
+      <li><a href="https://www.lafinancepourtous.com/pratique/credit/credit-immobilier/pret-immo-l-essentiel-a-savoir/l-apport-personnel/" rel="noopener">La Finance pour tous : l'apport personnel</a></li>
+      <li><a href="https://www.meilleurtaux.com/credit-immobilier/barometre-des-taux.html" rel="noopener">Meilleurtaux : baromètre des taux de crédit immobilier</a> (mis à jour le 26 octobre 2026 : 3,60 à 3,65&#8239;% sur 25 ans)</li>
+      <li><a href="https://www.cafpi.fr/credit-immobilier/barometre-taux/actualites-taux/analyse-taux-credit-immobilier-octobre-2026" rel="noopener">CAFPI : les taux de crédit immobilier en octobre 2026</a> (mis à jour le 29 octobre 2026 : 3,58&#8239;% sur 25 ans)</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>
+    <h3>Brique &amp; Clé</h3>
+    <p>Outils gratuits pour préparer un achat immobilier dans les Hauts-de-France.</p>
+    <p class="warn">Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.</p>
+    <p style="margin-top:12px">Liens partenaires : certains liens de ce site sont rémunérés. Brique &amp; Clé n'est ni une banque ni un courtier et ne donne pas de conseil en crédit.</p>
+  </div>
+  <div>
+    <h3>Mentions légales</h3>
+    <p>Éditeur : Sonia ALVES LOPES, entrepreneur individuel (ALS Nova Gestion)<br>2B rue Notre Dame de Tongre, 62580 Arleux-en-Gohelle<br>SIREN 109 176 784<br>TVA non applicable, art. 293 B du CGI</p>
+  </div>
+</footer>
+</div>
+<script>
+const PARTNER_LINKS = { credit: "", rachat: "", assurance: "" };
+document.querySelectorAll("[data-partner]").forEach(a => { const u = PARTNER_LINKS[a.dataset.partner]; if (u) { a.href = u; a.target = "_blank"; } });
+</script>
+</body>
+</html>
