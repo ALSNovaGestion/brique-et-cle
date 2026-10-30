@@ -50,6 +50,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-10-23 → /cambrai — Cambrai (59400)
 - [x] 2026-10-26 → /guide-dpe-achat — Acheter une passoire thermique : DPE, travaux et location
 - [x] 2026-10-28 → /roubaix — Roubaix (59100)
+- [x] 2026-10-30 → /guide-apport-personnel — Acheter sans apport ou avec peu d'apport : ce que regardent les banques
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville (cartes de prix, ligne « Source », exemple chiffré, mois de la balise meta description) et date lastmod de la page dans sitemap.xml, source meilleursagents.com/prix-immobilier/<ville>-<cp>/ — contrôlés le 2026-10-02 : les 10 pages ville affichent les estimations MeilleursAgents au 1er octobre 2026
