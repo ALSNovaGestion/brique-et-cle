@@ -5,7 +5,6 @@ Quand il reste moins de 8 sujets à publier, il en ajoute 15 nouveaux (villes du
 Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immobilier, assurance emprunteur, rachat de crédits.
 
 ## À publier
-- [ ] ville : tourcoing (59200) — Tourcoing
 - [ ] article : guide-compromis-de-vente — Du compromis à l'acte : le calendrier d'un achat
 - [ ] ville : maubeuge (59600) — Maubeuge
 - [ ] ville : carvin (62220) — Carvin
