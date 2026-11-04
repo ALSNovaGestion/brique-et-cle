@@ -50,6 +50,7 @@ Priorité aux sujets qui mènent naturellement vers un partenaire : crédit immo
 - [x] 2026-10-28 → /roubaix — Roubaix (59100)
 - [x] 2026-10-30 → /guide-apport-personnel — Acheter sans apport ou avec peu d'apport : ce que regardent les banques
 - [x] 2026-11-02 → /tourcoing — Tourcoing (59200)
+- [x] 2026-11-04 → /guide-compromis-de-vente — Du compromis à l'acte : le calendrier d'un achat
 
 ## Données chiffrées à contrôler chaque mois (vérificateur)
 - Prix au m² et loyers : chaque page ville (cartes de prix, ligne « Source », exemple chiffré, mois de la balise meta description) et date lastmod de la page dans sitemap.xml, source meilleursagents.com/prix-immobilier/<ville>-<cp>/ — contrôlés le 2026-11-02 : 11 pages au 1er novembre 2026 (Arras, Lens, Béthune, Hénin-Beaumont, Douai, Lille, Liévin, Dunkerque, Bruay-la-Buissière, Roubaix mises à jour ce jour ; Tourcoing publiée au 1er novembre) ; 5 pages restent au 1er octobre 2026 car MeilleursAgents affichait encore cette date le 2026-11-02 (Calais, Boulogne-sur-Mer, Valenciennes, Saint-Omer, Cambrai : valeurs identiques à celles de la page) → à recontrôler au prochain passage
